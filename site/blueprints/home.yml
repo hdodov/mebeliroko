@@ -1,0 +1,12 @@
+title:
+  en: Home
+  bg: Начална
+
+pages: false
+
+fields:
+  title:
+    label:
+      en: Title
+      bg: Заглавие
+    type: text

@@ -1,0 +1,28 @@
+title: Site
+
+files:
+  fields:
+    caption:
+      label:
+        en: Caption
+        bg: Надпис
+      type: textarea
+
+fields:
+  title:
+    label:
+      en: Title
+      bg: Заглавие
+    type: text
+
+  logo:
+    label:
+      en: Logo
+      bg: Лого
+    type: image
+
+  copyright:
+    label:
+      en: Copyright
+      bg: Авторско право
+    type: textarea

@@ -1,0 +1,10 @@
+title:
+  en: Project
+  bg: Проект
+
+fields:
+  title:
+    label:
+      en: Title
+      bg: Заглавие
+    type: text

@@ -1,0 +1,63 @@
+header {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+    flex: 0 0 auto;
+    width: $header-width;
+    height: 100%;
+    padding: 0 30px;
+
+    background: $color-background-1;
+
+    @media (min-width: #{1140px + $header-width * 2}) {
+        position: fixed;
+    }
+
+    .logo-container,
+    .foot-container {
+        margin: 30px 0;
+    }
+
+    .logo-container {
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    nav {
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            a {
+                display: block;
+                padding: 10px 0;
+
+                font-size: 20px;
+                color: $color-text-1;
+
+                transition: color $transition-menu-hover;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $color-text-active-1;
+                }
+            }
+
+            li.is-active a {
+                color: $color-text-active-1;
+            }
+        }
+    }
+
+    .foot-container {
+        font-size: 12px;
+
+        p {
+            margin: 0;
+        }
+    }
+}
