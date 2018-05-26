@@ -14,6 +14,15 @@ header {
         position: fixed;
     }
 
+    a {
+        color: $color-text-1;
+        transition: color $transition-menu-hover;
+
+        &:hover {
+            color: $color-text-active-1;
+        }
+    }
+
     .logo-container,
     .foot-container {
         margin: 30px 0;
@@ -39,11 +48,8 @@ header {
                 font-size: 20px;
                 color: $color-text-1;
 
-                transition: color $transition-menu-hover;
-
                 &:hover {
                     text-decoration: none;
-                    color: $color-text-active-1;
                 }
             }
 
@@ -58,6 +64,10 @@ header {
 
         p {
             margin: 0;
+        }
+
+        .languages {
+            margin-top: 30px;
         }
     }
 }

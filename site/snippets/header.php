@@ -15,7 +15,7 @@
         </div>
     <?php endif; ?>
 
-    <nav>
+    <nav role="navigation">
         <ul>
             <?php foreach ($pages->visible() as $item): ?>
                 <li class="<?= r($item->isActive(), 'is-active'); ?>">
@@ -28,6 +28,7 @@
     <?php if ($copyright): ?>
         <div class="foot-container">
             <?= kirbytext($copyright); ?>
+            <?= snippet('language-switch'); ?>
         </div>
     <?php endif; ?>
 </header>
