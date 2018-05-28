@@ -11,30 +11,24 @@
 <body>
     <?= snippet('header'); ?>
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <?php
-                    foreach ($pages->get('home')->children() as $child) {
-                        echo $child->title();
-                        echo '<br>';
-                        echo $child->tags();
-                        echo '<br>';
+    <main class="container-wrapper items-wrapper">
+        <div class="container">
+            <h1 class="title"><?= !empty($filterTags) ? $filterTags : $page->title(); ?></h1>
 
-                        echo '<pre>';
-                        var_dump($child->tags());
-
-                        $plucked = $pages->get('home')->children()->pluck('tags', ',');
-                        var_dump($plucked);
-
-                        foreach ($plucked as $tag) {
-                            echo '<a href="' . url('projects/' . url::paramsToString(['таг' => $tag])) . '">' . $tag . '</a>';
-                        }
-                        
-                    }
-                ?>
+            <div class="row justify-content-center">
+                <?php foreach ($projects as $project): ?>
+                    <div class="col-4">
+                        <div class="ratio-box tag-box">
+                            <div class="wrapper">
+                                <a class="content" href="<?= $project->url(); ?>">
+                                    <h2><?= $project->title(); ?></h2>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>

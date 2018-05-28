@@ -11,3 +11,37 @@ body {
     font-size: 16px;
     line-height: 1.5;
 }
+
+h2 {
+    letter-spacing: 1px;
+}
+
+.container {
+    padding: 0 30px;
+}
+
+.container-wrapper {
+    flex: 1 0 auto;
+    overflow: auto;
+
+    &.center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .container {
+            flex: 1 0 auto;
+            max-height: 100%;
+        }
+    }
+
+    &.items-wrapper {
+        .row {
+            padding: 15px 0;
+        }
+
+            .ratio-box {
+                margin: 15px 0;
+            }
+    }
+}

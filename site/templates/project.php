@@ -11,6 +11,18 @@
 <body>
     <?= snippet('header'); ?>
 
+    <nav class="breadcrumb" role="navigation">
+      <ul>
+        <?php foreach($site->breadcrumb() as $crumb): ?>
+        <li>
+          <a href="<?= $crumb->url() ?>">
+            <?= html($crumb->title()) ?>
+          </a>
+        </li>
+        <?php endforeach ?>
+      </ul>
+    </nav>
+
     <div class="container">
         <div class="row">
             <div class="col">

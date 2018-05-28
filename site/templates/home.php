@@ -11,23 +11,24 @@
 <body>
     <?= snippet('header'); ?>
 
-    <div class="container">
-        <div class="row">
-            <?php foreach ($tags as $tag): ?>
-                <div class="col-4">
-                    <a href="<?= $tag['url']; ?>">
-                        <h2><?= $tag['title']; ?></h2>
+    <main class="container-wrapper center items-wrapper">
+        <div class="container">
+            <div class="row">
+                <?php foreach ($tags as $tag): ?>
+                    <?php $coverUrl = ($tag['cover']) ? thumb($tag['cover'], array('width' => 300, 'height' => 300))->url() : null; ?>
 
-                        <?php if ($tag['cover']): ?>
-                            <img
-                                src="<?= thumb($tag['cover'], array('width' => 300, 'height' => 300))->url(); ?>"
-                                alt="<?= $tag['cover']->caption(); ?>"
-                            >
-                        <?php endif; ?>
-                    </a>
-                </div>
-            <?php endforeach; ?>
+                    <div class="col-4">
+                        <div class="ratio-box tag-box" style="background-image: <?= !empty($coverUrl) ? "url($coverUrl)" : 'none'; ?>;">
+                            <div class="wrapper">
+                                <a class="content" href="<?= $tag['url']; ?>">
+                                    <h2><?= $tag['title']; ?></h2>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
         </div>
-    </div>
+    </main>
 </body>
 </html>
