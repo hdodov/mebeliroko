@@ -1,6 +1,17 @@
 title:
   en: Project
   bg: Проект
+icon: cube
+
+pages: false
+
+files:
+  max: 10
+  fields:
+    caption:
+      label:
+        en: Caption
+        bg: Надпис
 
 fields:
   title:
@@ -8,3 +19,13 @@ fields:
       en: Title
       bg: Заглавие
     type: text
+  text:
+    label:
+      en: Description
+      bg: Описание
+    type: textarea
+  tags:
+    label:
+      en: Tags
+      bg: Тагове
+    type: tags

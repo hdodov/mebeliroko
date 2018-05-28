@@ -1,9 +1,9 @@
 title:
-  en: Home
-  bg: Начална
-icon: home
+  en: Projects
+  bg: Проекти
+icon: cubes
 
-pages: false
+pages: project
 
 files: false
 

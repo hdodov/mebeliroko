@@ -1,0 +1,9 @@
+Title: Sasho’s Bedroom
+
+----
+
+Text: This is my bedroom!
+
+----
+
+Tags: bedroom,cool,nice
