@@ -13,10 +13,18 @@
 
     <main class="container-wrapper items-wrapper">
         <div class="container">
-            <h1 class="title"><?= !empty($filterTags) ? $filterTags : $page->title(); ?></h1>
+            <div class="page-head">
+                <h1 class="title"><?= $page->title(); ?></h1>
+
+                <?= snippet('tagcloud', array(
+                    'tags' => $availableTags,
+                    'pageUrl' => $page->url(),
+                    'activeTags' => explode(',', $filterTags)
+                )); ?>
+            </div>
 
             <div class="row justify-content-center">
-                <?php foreach ($projects as $project): ?>
+                <?php foreach ($visibleProjects as $project): ?>
                     <div class="col-4">
                         <div class="ratio-box tag-box">
                             <div class="wrapper">

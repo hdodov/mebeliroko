@@ -10,23 +10,19 @@
 </head>
 <body>
     <?= snippet('header'); ?>
-
-    <nav class="breadcrumb" role="navigation">
-      <ul>
-        <?php foreach($site->breadcrumb() as $crumb): ?>
-        <li>
-          <a href="<?= $crumb->url() ?>">
-            <?= html($crumb->title()) ?>
-          </a>
-        </li>
-        <?php endforeach ?>
-      </ul>
-    </nav>
+    <?= snippet('breadcrumbs'); ?>
 
     <div class="container">
         <div class="row">
             <div class="col">
                 <h1><?= $page->title(); ?></h1>
+
+                <?= snippet('tagcloud', array(
+                    'tags' => explode(',', $page->tags()),
+                    'pageUrl' => $page->parent()->url(),
+                    'activeTags' => array()
+                )); ?>
+
                 <?= kirbytext($page->text()); ?>
             </div>
         </div>

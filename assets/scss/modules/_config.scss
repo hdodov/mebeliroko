@@ -1,5 +1,6 @@
 $header-width: 265px;
 
+$color-main-1: #0e6cce;
 $color-background-1: #242424;
 $color-text-1: #888888;
 $color-text-active-1: #ffffff;
@@ -9,3 +10,4 @@ $font-family-1: Montserrat, 'Helvetica Neue', Arial, sans-serif;
 $transition-1: 0.16s ease-out;
 $transition-tag-box: 0.4s cubic-bezier(0.27, 0.73, 0.25, 1);
 $transition-menu-hover: $transition-1;
+$transition-tag-hover: 0.1s ease;

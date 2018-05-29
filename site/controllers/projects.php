@@ -2,11 +2,13 @@
 
 return function ($site, $pages, $page) {
     $filterTags = param('tag');
-    $projects = $page->children()->visible();
+    $visibleProjects = $page->children()->visible();
+
+    $availableTags = $visibleProjects->pluck('tags', ',', true);
 
     if ($filterTags) {
-        $projects = $projects->filterBy('tags', $filterTags, ',');
+        $visibleProjects = $visibleProjects->filterBy('tags', $filterTags, ',');
     }
 
-    return compact('projects', 'filterTags');
+    return compact('visibleProjects', 'filterTags', 'availableTags');
 };
