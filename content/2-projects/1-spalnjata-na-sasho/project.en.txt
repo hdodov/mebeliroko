@@ -2,8 +2,8 @@ Title: Sasho’s Bedroom
 
 ----
 
-Text: This is my bedroom!
+Text: Curabitur consequat a orci vitae feugiat. Nunc et sodales eros. Curabitur sit amet tortor molestie, pellentesque eros eu, venenatis lectus. Mauris convallis sit amet ex sit amet molestie. Suspendisse consectetur, enim nec lobortis vestibulum, mi dui iaculis nunc, ut sagittis lacus tortor ac arcu. Sed ac nisl eu orci rhoncus mollis vitae sed orci. Quisque viverra dolor quis lectus euismod dignissim. Donec in ultricies libero. Phasellus at purus nunc. Vivamus consectetur vel velit sit amet tincidunt. Curabitur efficitur gravida turpis vitae tempor. Nam ultrices et est vel tincidunt. Pellentesque quis imperdiet nisi, id tincidunt risus.
 
 ----
 
-Tags: bedroom,cool,nice
+Tags: Bedroom,Ceramic,Wood

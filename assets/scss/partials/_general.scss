@@ -16,12 +16,8 @@ h2 {
     letter-spacing: 1px;
 }
 
-.container {
-    padding: 0 30px;
-}
-
 .container-wrapper {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     overflow: auto;
 
     &.center {
@@ -35,13 +31,25 @@ h2 {
         }
     }
 
-    &.items-wrapper {
-        .row {
-            padding: 15px 0;
+    &.limited {
+        .container {
+            max-width: 800px;
+        }
+    }
+}
+
+    .container {
+        padding: 0 30px; 
+    }
+
+        .container-content {
+            margin: 80px 0;
         }
 
-            .ratio-box {
-                margin: 15px 0;
-            }
+.items-row {
+    padding: 15px 0;
+
+    .ratio-box {
+        margin: 15px 0;
     }
 }
