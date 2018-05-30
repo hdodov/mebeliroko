@@ -27,16 +27,20 @@
                         )); ?>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col">
-                        <?php foreach ($page->images() as $image): ?>
-                            <?= thumb($image, array('width' => 300, 'height' => 300)); ?>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
             </div>
+
+            <div class="masonry">
+                <?php foreach ($page->images() as $image): ?>
+                    <div class="image">
+                        <?= thumb($image, array('width' => 300, 'height' => 300)); ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+
         </div>
     </div>
+
+    <?= js('assets/node_modules/masonry-layout/dist/masonry.pkgd.js'); ?>
+    <?= js('assets/js/main.js'); ?>
 </body>
 </html>

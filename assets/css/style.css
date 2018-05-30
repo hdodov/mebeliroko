@@ -43,8 +43,11 @@ body {
   font-size: 16px;
   line-height: 1.5; }
 
-h2 {
+h1, h2 {
   letter-spacing: 1px; }
+
+h1, h2, h3 {
+  color: #3e3e3e; }
 
 .container-wrapper {
   -webkit-box-flex: 1;
@@ -155,13 +158,21 @@ header {
 
 main .title {
   font-size: 36px;
-  text-align: center;
-  color: #3e3e3e; }
+  text-align: center; }
 
 .page-head {
   margin-top: 80px;
   margin-bottom: 20px;
   text-align: center; }
+
+.masonry {
+  margin: -15px; }
+  .masonry .image {
+    width: 33%;
+    display: inline-block; }
+    .masonry .image img {
+      width: 100%;
+      padding: 15px; }
 
 .ratio-box {
   position: relative; }
