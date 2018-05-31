@@ -1,10 +1,13 @@
-(function () {
-    var elem = document.querySelector('.masonry');
-
-    if (elem) {
-        var msnry = new Masonry(elem, {
-            itemSelector: '.image',
+$(function () {
+    $('.masonry-grid').each(function (i, grid) {
+        new Masonry(grid, {
+            itemSelector: '.masonry-item',
             percentPosition: true
         });
-    } 
-})();
+    });
+
+    var $galleries = $('.gallery');
+    if ($galleries.length) {
+        $galleries.roccoGallery();
+    }
+});

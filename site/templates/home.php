@@ -22,7 +22,7 @@
                             <div class="ratio-box tag-box" style="background-image: <?= !empty($coverUrl) ? "url($coverUrl)" : 'none'; ?>;">
                                 <div class="wrapper">
                                     <a class="content" href="<?= $tag['url']; ?>">
-                                        <h2><?= $tag['title']; ?></h2>
+                                        <h2 class="title"><?= $tag['title']; ?></h2>
                                     </a>
                                 </div>
                             </div>

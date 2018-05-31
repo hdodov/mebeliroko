@@ -37,7 +37,7 @@
                             <div class="ratio-box tag-box" style="background-image: <?= !empty($coverUrl) ? "url($coverUrl)" : 'none'; ?>;">
                                 <div class="wrapper">
                                     <a class="content" href="<?= $project->url(); ?>">
-                                        <h2><?= $project->title(); ?></h2>
+                                        <h2 class="title"><?= $project->title(); ?></h2>
                                     </a>
                                 </div>
                             </div>

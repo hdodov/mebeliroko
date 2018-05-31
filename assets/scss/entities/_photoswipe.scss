@@ -1,0 +1,42 @@
+.pswp {
+    pointer-events: none; // to not interrupt the hover effect of images before animating
+
+    &.pswp--animated-in {
+        pointer-events: auto;
+    }
+
+    .pswp__button {
+        outline: none;
+    }
+
+    .pswp__counter {
+        padding: 0 16px;
+        font-weight: 600;
+    }
+
+    &:not(.pswp--zoomed-in) {
+        .pswp__button--arrow--left,
+        .pswp__button--arrow--right {
+            width: 30%;
+            height: 80%;
+            height: calc(100% - 44px);
+            top: auto;
+            bottom: 0;
+            outline: none;
+
+            &:before {
+                top: 50%;
+                margin-top: -22px;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+
+    .pswp__caption__center {
+        max-width: 40em;
+        padding: 14px 20px 15px 20px;
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.5;
+    }
+}
