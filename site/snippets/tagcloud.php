@@ -1,5 +1,5 @@
 <nav class="tag-cloud">
-    <ul><!--
+    <ul>
         <?php foreach ($tags as $tag): ?>
             <?php
                 $tagUrl = $pageUrl . '/';
@@ -9,9 +9,9 @@
                     $tagUrl .= url::paramsToString(['tag' => $tag]);
                 }
             ?>
-         --><li class="<?= r($tagActive, 'is-active'); ?>">
+            <li class="<?= r($tagActive, 'is-active'); ?>">
                 <a href="<?= url($tagUrl); ?>"><?= $tag; ?></a>
-            </li><!--
+            </li>
         <?php endforeach; ?>
- --></ul>
+    </ul>
 </nav>

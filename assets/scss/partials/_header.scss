@@ -3,14 +3,13 @@ header {
     flex-flow: column nowrap;
     align-items: stretch;
     justify-content: space-between;
-    width: $header-width;
-    height: 100%;
-    padding: 0 30px;
-
     position: fixed;
         top: 0;
         left: 0;
 
+    width: $header-width;
+    height: 100%;
+    padding: 0 30px;
     background: $color-background-1;
 
     a {
@@ -24,6 +23,7 @@ header {
 
     .logo-container,
     .foot-container {
+        display: block;
         margin: 30px 0;
     }
 
@@ -40,6 +40,11 @@ header {
             padding: 0;
             list-style-type: none;
 
+            li.is-active a {
+                color: $color-text-active-1;
+            }
+        }
+
             a {
                 display: block;
                 padding: 10px 0;
@@ -51,22 +56,81 @@ header {
                     text-decoration: none;
                 }
             }
+    }
 
-            li.is-active a {
-                color: $color-text-active-1;
-            }
+    @include media-larger("xs") {
+        .mobile-button {
+            display: none;
+        }
+
+        .header-top, .header-content {
+            flex: 1 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+            justify-content: space-between;
         }
     }
 
-    .foot-container {
-        font-size: 12px;
+    @include media-smaller("sm") {
+        width: 100%;
+        height: auto;
+        padding: 0;
 
-        p {
-            margin: 0;
+        .logo-container {
+            margin: 12px 0;
+
+            img {
+                max-height: 24px;
+            }
         }
 
-        .languages {
-            margin-top: 30px;
+        .header-top {
+            display: flex;
+            align-items: stretch;
+            justify-content: space-between;
+            margin-right: -12px; // negate the padding so that mobile-button is aligned
+            padding: 0 12px;
         }
+
+            .mobile-button {
+                // for some stupid rendering issue
+                margin-top: -2px;
+                transform: translate(0px, 1px);
+
+                padding: 12px 20px;
+                outline: none;
+            }
+
+        .header-content {
+            padding: 0 20px;
+            background: #313131;
+            text-align: right;
+        }
+
+            nav {
+                margin: 20px 0;
+
+                ul {
+                    margin: -10px 0;
+                }
+
+                a {
+                    font-size: 16px;
+                }
+            }
+
+            .foot-container {
+                margin: 0;
+                border-top: 1px solid rgba(#fff, 0.1);
+
+                .languages {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+            }
     }
 }

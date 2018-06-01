@@ -13,7 +13,7 @@
 
     <div class="container-wrapper center">
         <div class="container-wrapper-inner">
-            <main class="container limited">
+            <main class="container">
                 <div class="row items-row">
                     <?php foreach ($tags as $tag): ?>
                         <?php $coverUrl = ($tag['cover']) ? thumb($tag['cover'], array('width' => 600, 'height' => 600))->url() : null; ?>
@@ -32,5 +32,8 @@
             </main>
         </div>
     </div>
+
+    <?= js('assets/node_modules/jquery/dist/jquery.slim.min.js'); ?>
+    <?= js('assets/js/main.js'); ?>
 </body>
 </html>

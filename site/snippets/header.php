@@ -9,26 +9,36 @@
 ?>
 
 <header>
-    <?php if ($logo): ?>
-        <a class="logo-container" href="<?= $site->language()->url(); ?>">
-            <img src="<?= $logoUrl; ?>" alt="<?= $logo->caption(); ?>">
-        </a>
-    <?php endif; ?>
+    <div class="header-top">
+        <?php if ($logo): ?>
+            <a class="logo-container" href="<?= $site->language()->url(); ?>">
+                <img src="<?= $logoUrl; ?>" alt="<?= $logo->caption(); ?>">
+            </a>
+        <?php else: ?>
+            <h1><?= $site->name(); ?></h1>
+        <?php endif; ?>
 
-    <nav role="navigation">
-        <ul>
-            <?php foreach ($pages->visible() as $item): ?>
-                <li class="<?= r($item->isActive(), 'is-active'); ?>">
-                    <a href="<?= $item->url(); ?>"><?= $item->title()->html(); ?></a>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    </nav>
+        <button class="mobile-button hamburger hamburger--slider-r" type="button"
+                aria-label="Menu" aria-controls="navigation">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+    </div>
 
-    <?php if ($copyright): ?>
+    <div class="header-content">
+        <nav role="navigation">
+            <ul>
+                <?php foreach ($pages->visible() as $item): ?>
+                    <li class="<?= r($item->isActive(), 'is-active'); ?>">
+                        <a href="<?= $item->url(); ?>"><?= $item->title()->html(); ?></a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </nav>
+
         <div class="foot-container">
-            <?= kirbytext($copyright); ?>
             <?= snippet('language-switch'); ?>
         </div>
-    <?php endif; ?>
+    </div>
 </header>

@@ -11,6 +11,23 @@
 @import 'partials/_header';
 @import 'partials/_languages';
 
+$hamburger-padding-x: 12px;
+$hamburger-padding-y: 12px;
+$hamburger-layer-width: 26px;
+$hamburger-layer-height: 2px;
+$hamburger-layer-spacing: 5px;
+$hamburger-layer-color: #fff;
+$hamburger-layer-border-radius: 2px;
+$hamburger-types: (
+    slider-r
+);
+
+@import '../node_modules/hamburgers/_sass/hamburgers/hamburgers';
+
+.hamburger-box {
+    display: block; // remove whitespace below
+}
+
 .page-head {
     margin-top: 80px;
     margin-bottom: 20px;

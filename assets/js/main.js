@@ -11,3 +11,7 @@ $(function () {
         $galleries.roccoGallery();
     }
 });
+
+$('.mobile-button').click(function () {
+    $(this).toggleClass('is-active');
+});
