@@ -10,9 +10,9 @@
 
 <header>
     <?php if ($logo): ?>
-        <div class="logo-container">
+        <a class="logo-container" href="<?= $site->language()->url(); ?>">
             <img src="<?= $logoUrl; ?>" alt="<?= $logo->caption(); ?>">
-        </div>
+        </a>
     <?php endif; ?>
 
     <nav role="navigation">

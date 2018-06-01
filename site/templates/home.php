@@ -11,9 +11,9 @@
 <body>
     <?= snippet('header'); ?>
 
-    <main class="container-wrapper center limited">
-        <div class="container">
-            <div class="container-content">
+    <div class="container-wrapper center">
+        <div class="container-wrapper-inner">
+            <main class="container limited">
                 <div class="row items-row">
                     <?php foreach ($tags as $tag): ?>
                         <?php $coverUrl = ($tag['cover']) ? thumb($tag['cover'], array('width' => 600, 'height' => 600))->url() : null; ?>
@@ -29,8 +29,8 @@
                         </div>
                     <?php endforeach; ?>
                 </div>
-            </div>
+            </main>
         </div>
-    </main>
+    </div>
 </body>
 </html>

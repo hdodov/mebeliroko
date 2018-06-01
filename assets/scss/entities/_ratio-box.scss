@@ -7,6 +7,12 @@
         padding-top: 100%;
     }
 
+    &.wide {
+        &:before {
+            padding-top: 56.25%;
+        }
+    }
+
     .wrapper {
         position: absolute;
             top: 0;
