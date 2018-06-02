@@ -13,7 +13,7 @@
                     <?php foreach ($tags as $tag): ?>
                         <?php $coverUrl = ($tag['cover']) ? thumb($tag['cover'], array('width' => 600, 'height' => 600))->url() : null; ?>
 
-                        <div class="col-4">
+                        <div class="col-6 col-sm-4">
                             <div class="ratio-box tag-box" style="background-image: <?= !empty($coverUrl) ? "url($coverUrl)" : 'none'; ?>;">
                                 <div class="wrapper">
                                     <a class="content" href="<?= $tag['url']; ?>">

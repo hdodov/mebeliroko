@@ -26,7 +26,7 @@
                     }
                 ?>
 
-                <div class="col-4">
+                <div class="col-12 col-sm-6">
                     <div class="ratio-box wide tag-box" style="background-image: <?= !empty($coverUrl) ? "url($coverUrl)" : 'none'; ?>;">
                         <div class="wrapper">
                             <a class="content" href="<?= $project->url(); ?>">

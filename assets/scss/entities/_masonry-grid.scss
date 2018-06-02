@@ -44,4 +44,16 @@
             }
         }
     }
+
+    @include media-smaller("sm") {
+        margin: -7.5px;
+
+        .masonry-item {
+            width: 50%;
+
+            .masonry-item-content {
+                margin: 7.5px;
+            }
+        }
+    }
 }

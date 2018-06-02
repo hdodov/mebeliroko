@@ -41,6 +41,13 @@
       .masonry-grid .masonry-item .masonry-item-content:hover img {
         -webkit-transform: scale(1.06);
                 transform: scale(1.06); }
+  @media (max-width: 767px) {
+    .masonry-grid {
+      margin: -7.5px; }
+      .masonry-grid .masonry-item {
+        width: 50%; }
+        .masonry-grid .masonry-item .masonry-item-content {
+          margin: 7.5px; } }
 
 .pswp {
   pointer-events: none; }
@@ -149,6 +156,9 @@
   .tag-box .title {
     margin: 0;
     color: #fff; }
+  @media (max-width: 767px) {
+    .tag-box .title {
+      font-size: 18px; } }
 
 .tag-cloud {
   margin: 20px 0; }
@@ -242,6 +252,19 @@ h1, h2, h3 {
   padding: 15px 0; }
   .items-row .ratio-box {
     margin: 15px 0; }
+
+@media (max-width: 767px) {
+  .container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0 15px; }
+  .items-row {
+    margin: 0 -7.5px;
+    padding: 7.5px 0; }
+    .items-row > div {
+      padding: 0 7.5px; }
+    .items-row .ratio-box {
+      margin: 7.5px 0; } }
 
 body.mobile-nav-active {
   overflow: hidden; }
@@ -345,8 +368,8 @@ header {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
-        margin-right: -12px;
-        padding: 0 12px;
+        margin-right: -15px;
+        padding: 0 15px;
         position: relative;
         z-index: 10000;
         pointer-events: auto;
@@ -534,3 +557,11 @@ header {
   .gallery figure {
     cursor: -webkit-zoom-in;
     cursor: zoom-in; }
+
+@media (max-width: 767px) {
+  .page-head {
+    margin-top: 30px; }
+    .page-head .title {
+      font-size: 24px; }
+  .page-text {
+    margin: 30px 0; } }

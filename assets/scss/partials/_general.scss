@@ -62,3 +62,24 @@ h1, h2, h3 {
         margin: 15px 0;
     }
 }
+
+@include media-smaller("sm") {
+    .container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 0 15px;
+    }
+
+    .items-row {
+        margin: 0 -7.5px;
+        padding: 7.5px 0;
+
+        & > div {
+            padding: 0 7.5px;
+        }
+
+        .ratio-box {
+            margin: 7.5px 0;
+        }
+    }
+}
