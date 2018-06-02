@@ -25,9 +25,3 @@ fields:
       en: Logo
       bg: Лого
     type: image
-
-  copyright:
-    label:
-      en: Copyright
-      bg: Авторско право
-    type: textarea

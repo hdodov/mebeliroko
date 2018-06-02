@@ -1,7 +1,8 @@
 <?= js('assets/node_modules/jquery/dist/jquery.slim.min.js'); ?>
 
 <?php if (!empty($loadMasonry)): ?>
-    <?= js('assets/node_modules/masonry-layout/dist/masonry.pkgd.js'); ?>
+    <?= js('assets/node_modules/enquire.js/dist/enquire.min.js'); ?>
+    <?= js('assets/node_modules/savvior/dist/savvior.min.js'); ?>
 <?php endif; ?>
 
 <?php if (!empty($loadLightbox)): ?>

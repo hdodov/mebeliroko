@@ -6,25 +6,20 @@ return function ($site, $pages, $page) {
     foreach ($pages->visible()->filterBy('template', 'projects') as $projectsPage) {
         $visibleProjects = $projectsPage->children()->visible();
         $pageTags = $visibleProjects->pluck('tags', ',', true);
-        $tagsMeta = $projectsPage->tags_meta()->yaml();
 
         foreach ($pageTags as $tag) {
-            $tagCover = false;
+            $tagProjects = $visibleProjects->filterBy('tags', $tag, ',');
+            $tagCover = $tagProjects->first()->images()->sortBy('sort', 'asc')->first();
 
-            foreach ($tagsMeta as $meta) {
-                if (strpos($meta['tag_name'], $tag) !== false && !empty($meta['image'])) {
-                    $tagCover = $projectsPage->image($meta['image']);
-                    break;
-                }
-            }
- 
-            if (!$tagCover) {
-                $tagCover = $visibleProjects->filterBy('tags', $tag, ',')->first()->images()->first();
+            if (count($tagProjects) == 1) {
+                $linkUrl = $tagProjects->first()->url();
+            } else {
+                $linkUrl = url($projectsPage->url() . '/' . url::paramsToString(['tag' => $tag]));
             }
 
             array_push($tags, array(
                 'title' => $tag,
-                'url' => url($projectsPage->url() . '/' . url::paramsToString(['tag' => $tag])),
+                'url' => $linkUrl,
                 'cover' => $tagCover
             ));
         }

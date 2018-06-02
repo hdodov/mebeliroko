@@ -9,15 +9,9 @@
     <main class="container">
         <div class="page-head">
             <h1 class="title"><?= $page->title(); ?></h1>
-
-            <?= snippet('tagcloud', array(
-                'tags' => $availableTags,
-                'pageUrl' => $page->url(),
-                'activeTags' => explode(',', $filterTags)
-            )); ?>
         </div>
 
-        <div class="row items-row justify-content-center">
+        <div class="masonry-grid link-grid">
             <?php foreach ($visibleProjects as $project): ?>
                 <?php
                     $coverUrl = $project->images()->sortBy('sort', 'asc')->first();
@@ -26,19 +20,21 @@
                     }
                 ?>
 
-                <div class="col-12 col-sm-6">
-                    <div class="ratio-box wide tag-box" style="background-image: <?= !empty($coverUrl) ? "url($coverUrl)" : 'none'; ?>;">
-                        <div class="wrapper">
-                            <a class="content" href="<?= $project->url(); ?>">
-                                <h2 class="title"><?= $project->title(); ?></h2>
-                            </a>
+                <a class="item-link" href="<?= $project->url(); ?>">
+                    <div class="masonry-item">
+                        <img src="<?= $coverUrl; ?>"/>
+                        
+                        <div class="masonry-item-content">
+                            <h2 class="title"><?= $project->title(); ?></h2>
                         </div>
                     </div>
-                </div>
+                </a>
             <?php endforeach; ?>
         </div>
     </main>
 
-    <?= snippet('_body'); ?>
+    <?= snippet('_body', array(
+        'loadMasonry' => true
+    )); ?>
 </body>
 </html>

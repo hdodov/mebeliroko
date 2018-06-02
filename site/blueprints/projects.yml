@@ -11,20 +11,3 @@ fields:
       en: Title
       bg: Заглавие
     type: text
-  tags_meta:
-    label:
-      en: Tag images
-      bg: Снимки на таговете
-    type: structure
-    style: table
-    fields:
-      tag_name:
-        label:
-          en: Tags
-          bg: Тагове
-        type: tags
-      image:
-        label:
-          en: Image
-          bg: Снимка
-        type: image

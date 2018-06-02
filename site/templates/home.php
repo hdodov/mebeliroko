@@ -6,28 +6,26 @@
 <body>
     <?= snippet('header'); ?>
 
-    <div class="container-wrapper center">
-        <div class="container-wrapper-inner">
-            <main class="container">
-                <div class="row items-row">
-                    <?php foreach ($tags as $tag): ?>
-                        <?php $coverUrl = ($tag['cover']) ? thumb($tag['cover'], array('width' => 600, 'height' => 600))->url() : null; ?>
+    <main class="container">
+        <div class="masonry-grid link-grid">
+            <?php foreach ($tags as $tag): ?>
+                <?php $coverUrl = ($tag['cover']) ? thumb($tag['cover'], array('width' => 600, 'height' => 600))->url() : null; ?>
 
-                        <div class="col-6 col-sm-4">
-                            <div class="ratio-box tag-box" style="background-image: <?= !empty($coverUrl) ? "url($coverUrl)" : 'none'; ?>;">
-                                <div class="wrapper">
-                                    <a class="content" href="<?= $tag['url']; ?>">
-                                        <h2 class="title"><?= $tag['title']; ?></h2>
-                                    </a>
-                                </div>
-                            </div>
+                <a class="item-link" href="<?= $tag['url']; ?>">
+                    <div class="masonry-item">
+                        <img src="<?= $coverUrl; ?>"/>
+                        
+                        <div class="masonry-item-content">
+                            <h2 class="title"><?= $tag['title']; ?></h2>
                         </div>
-                    <?php endforeach; ?>
-                </div>
-            </main>
+                    </div>
+                </a>
+            <?php endforeach; ?>
         </div>
-    </div>
+    </main>
 
-    <?= snippet('_body'); ?>
+    <?= snippet('_body', array(
+        'loadMasonry' => true
+    )); ?>
 </body>
 </html>

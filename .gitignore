@@ -4,9 +4,6 @@
 !/assets/node_modules/bootstrap
 !/assets/node_modules/bootstrap/dist
 !/assets/node_modules/bootstrap/dist/**/*
-!/assets/node_modules/masonry-layout
-!/assets/node_modules/masonry-layout/dist
-!/assets/node_modules/masonry-layout/dist/**/*
 !/assets/node_modules/photoswipe
 !/assets/node_modules/photoswipe/dist
 !/assets/node_modules/photoswipe/dist/**/*

@@ -3,20 +3,3 @@ Title: Проекти
 ----
 
 Url-key: proekti
-
-----
-
-Tags-meta: 
-
-- 
-  tag_name: Спални
-  image: bedroom_1.jpg
-- 
-  tag_name: Кухни
-  image: kitchen_1.jpg
-- 
-  tag_name: Керамика
-  image: ceramic-bathroom.jpg
-- 
-  tag_name: Лукс
-  image: luxury-indoor-pool-ideas_7.jpg

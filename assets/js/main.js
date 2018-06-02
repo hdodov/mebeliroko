@@ -1,8 +1,14 @@
 $(function () {
-    $('.masonry-grid').each(function (i, grid) {
-        new Masonry(grid, {
-            itemSelector: '.masonry-item',
-            percentPosition: true
+     $('.masonry-grid').each(function (i, grid) {
+        savvior.init('.masonry-grid', {
+            "screen and (max-width: 767px)": {
+                columns: 2,
+                columnClasses: ['masonry-column']
+            },
+            "screen and (min-width: 768px)": {
+                columns: 3,
+                columnClasses: ['masonry-column']
+            },
         });
     });
 
