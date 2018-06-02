@@ -16,10 +16,10 @@ $transition-menu-hover: $transition-1;
 $transition-tag-hover: 0.1s ease;
 
 $transition-mobile-nav-shadow: 0.4s ease;
-$transition-mobile-menu-slide: 0.6s cubic-bezier(0.07, 0.97, 0.3, 1);
-$transition-mobile-menu-fade: 0.4s ease;
+$transition-mobile-menu-slide: 0.4s cubic-bezier(0.07, 0.97, 0.3, 1);
+$transition-mobile-menu-fade: 0.25s ease;
 $transition-mobile-menu:
-    visibility 0.6s linear,
+    visibility 0.4s linear,
     box-shadow $transition-mobile-nav-shadow,
     transform $transition-mobile-menu-slide,
     opacity $transition-mobile-menu-fade;
