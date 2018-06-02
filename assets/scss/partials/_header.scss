@@ -1,3 +1,7 @@
+body.mobile-nav-active {
+    overflow: hidden;
+}
+
 header {
     display: flex;
     flex-flow: column nowrap;
@@ -6,6 +10,7 @@ header {
     position: fixed;
         top: 0;
         left: 0;
+        z-index: 1000;
 
     width: $header-width;
     height: 100%;
@@ -22,7 +27,7 @@ header {
     }
 
     .logo-container,
-    .foot-container {
+    .languages-container {
         display: block;
         margin: 30px 0;
     }
@@ -63,14 +68,15 @@ header {
             display: none;
         }
 
-        .header-top, .header-content {
+        .header-top,
+        .header-content {
             flex: 1 0 auto;
         }
 
         .header-content {
             display: flex;
             flex-flow: column nowrap;
-            align-items: flex-start;
+            align-items: stretch;
             justify-content: space-between;
         }
     }
@@ -78,7 +84,12 @@ header {
     @include media-smaller("sm") {
         width: 100%;
         height: auto;
+        max-height: 100%;
         padding: 0;
+
+        user-select: none;
+        pointer-events: none; // not absorb pointer events when content is hidden, but takes up space
+        background: none;
 
         .logo-container {
             margin: 12px 0;
@@ -89,26 +100,43 @@ header {
         }
 
         .header-top {
+            flex: 1 0 auto;
             display: flex;
             align-items: stretch;
             justify-content: space-between;
             margin-right: -12px; // negate the padding so that mobile-button is aligned
             padding: 0 12px;
+            position: relative;
+                z-index: 10000;
+
+            pointer-events: auto; // negate parent pointer-events:none
+
+            background: $color-background-1;
+            transition: box-shadow $transition-mobile-nav-shadow;
+            box-shadow: $box-shadow-mobile-nav-top;
         }
 
             .mobile-button {
-                // for some stupid rendering issue
-                margin-top: -2px;
-                transform: translate(0px, 1px);
-
-                padding: 12px 20px;
+                margin-top: -1px;
+                padding: 12px 18px;
                 outline: none;
             }
 
         .header-content {
             padding: 0 20px;
-            background: #313131;
+            overflow: auto;
+            position: relative;
+                z-index: 999;
+
+            background: $color-background-1-light;
             text-align: right;
+
+            transition: $transition-mobile-menu;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translate(0, -100%);
+            box-shadow: none;
         }
 
             nav {
@@ -119,18 +147,33 @@ header {
                 }
 
                 a {
+                    padding: 14px 0;
                     font-size: 16px;
                 }
             }
 
-            .foot-container {
+            .languages-container {
                 margin: 0;
-                border-top: 1px solid rgba(#fff, 0.1);
+                border-top: $border-mobile-nav;
 
                 .languages {
                     margin-top: 20px;
                     margin-bottom: 20px;
                 }
             }
+
+        &.is-active {
+            .header-top {
+                box-shadow: $box-shadow-mobile-nav-top-active;
+            }
+
+            .header-content {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transform: translate(0, 0);
+                box-shadow: $box-shadow-mobile-nav-content-active;
+            }
+        }
     }
 }

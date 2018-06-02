@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?= $site->title(); ?></title>
-
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <?= css('assets/node_modules/bootstrap/dist/css/bootstrap-reboot.min.css'); ?>
-    <?= css('assets/node_modules/bootstrap/dist/css/bootstrap-grid.min.css'); ?>
-    <?= css('assets/css/style.css'); ?>
+    <?= snippet('_head'); ?>
 </head>
 <body>
     <?= snippet('header'); ?>
@@ -33,7 +28,6 @@
         </div>
     </div>
 
-    <?= js('assets/node_modules/jquery/dist/jquery.slim.min.js'); ?>
-    <?= js('assets/js/main.js'); ?>
+    <?= snippet('_body'); ?>
 </body>
 </html>

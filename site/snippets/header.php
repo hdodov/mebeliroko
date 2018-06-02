@@ -18,11 +18,10 @@
             <h1><?= $site->name(); ?></h1>
         <?php endif; ?>
 
-        <button class="mobile-button hamburger hamburger--slider-r" type="button"
-                aria-label="Menu" aria-controls="navigation">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
+        <button class="mobile-button hamburger hamburger--slider-r" type="button" aria-label="Menu" aria-controls="navigation">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
         </button>
     </div>
 
@@ -37,7 +36,7 @@
             </ul>
         </nav>
 
-        <div class="foot-container">
+        <div class="languages-container">
             <?= snippet('language-switch'); ?>
         </div>
     </div>

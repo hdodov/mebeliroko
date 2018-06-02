@@ -12,6 +12,14 @@ $(function () {
     }
 });
 
-$('.mobile-button').click(function () {
-    $(this).toggleClass('is-active');
-});
+(function () {
+    var $button = $('.mobile-button')
+    ,   $header = $button.closest('header')
+    ,   $body = $(document.body);
+
+    $button.on('click', function () {
+        $button.toggleClass('is-active');
+        $header.toggleClass('is-active');
+        $body.toggleClass('mobile-nav-active');
+    });
+})();

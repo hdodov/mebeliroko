@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?= $page->title(); ?> &middot; <?= $site->title(); ?></title>
-
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&subset=cyrillic" rel="stylesheet">
-    <?= css('assets/node_modules/bootstrap/dist/css/bootstrap-reboot.min.css'); ?>
-    <?= css('assets/node_modules/bootstrap/dist/css/bootstrap-grid.min.css'); ?>
-    <?= css('assets/css/style.css'); ?>
-
-    <?= css('assets/node_modules/photoswipe/dist/photoswipe.css'); ?>
-    <?= css('assets/node_modules/photoswipe/dist/default-skin/default-skin.css'); ?>
+    <?= snippet('_head'); ?>
 </head>
 <body vocab="http://schema.org/">
     <?= snippet('header'); ?>
@@ -55,14 +47,9 @@
         </div>
     </main>
 
-    <?= snippet('photoswipe'); ?>
-
-    <?= js('assets/node_modules/masonry-layout/dist/masonry.pkgd.js'); ?>
-    <?= js('assets/node_modules/photoswipe/dist/photoswipe.min.js'); ?>
-    <?= js('assets/node_modules/photoswipe/dist/photoswipe-ui-default.min.js'); ?>
-    <?= js('assets/node_modules/jquery/dist/jquery.slim.min.js'); ?>
-
-    <?= js('assets/js/jquery-roccoGallery.js'); ?>
-    <?= js('assets/js/main.js'); ?>
+    <?= snippet('_body', array(
+        'loadMasonry' => true,
+        'loadLightbox' => true
+    )); ?>
 </body>
 </html>
