@@ -1,5 +1,10 @@
 <?php if ($page->isHomePage()): ?>
-    <title><?= $site->title(); ?></title>
+    <title>
+        <?= $site->title(); ?>
+        <?php if ($site->slogan()->value()): ?>
+            &ndash; <?= $site->slogan(); ?>
+        <?php endif; ?>
+    </title>
 <?php else: ?>
     <title><?= $page->title(); ?> &middot; <?= $site->title(); ?></title>
 <?php endif; ?>

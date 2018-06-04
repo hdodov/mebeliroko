@@ -2,7 +2,7 @@
 
 <?php if (!empty($loadMasonry)): ?>
     <?= js('assets/node_modules/enquire.js/dist/enquire.min.js'); ?>
-    <?= js('assets/node_modules/savvior/dist/savvior.min.js'); ?>
+    <?= js('assets/node_modules/savvior/dist/savvior.js'); ?>
 <?php endif; ?>
 
 <?php if (!empty($loadLightbox)): ?>

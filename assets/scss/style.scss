@@ -1,6 +1,7 @@
 @import 'modules/_config';
 @import 'modules/_media-smart';
 
+@import 'entities/_link-grid';
 @import 'entities/_masonry-grid';
 @import 'entities/_photoswipe';
 @import 'entities/_ratio-box';
@@ -62,76 +63,5 @@ $hamburger-types: (
 
     .page-text {
         margin: 30px 0;
-    }
-}
-
-.link-grid {
-    .masonry-item {
-        &:before {
-            opacity: 0;
-        }
-
-        &:hover {
-            &:before {
-                opacity: 0.3;
-            }
-
-            .title {
-                background: #fff;
-                color: $color-heading;
-            }
-        }
-    }
-
-    .item-link {
-        text-decoration: none;
-    }
-
-        .masonry-item-content {
-            position: relative;
-                z-index: 20;
-        }
-
-            .title {
-                margin: 0;
-                padding: 9px 20px 8px 20px;
-                font-size: 18px;
-                text-transform: uppercase;
-
-
-                transition: all 0.2s ease-out;
-                background: $color-background-1;
-                color: #fff;
-            }
-
-    @include media-larger("xs") {
-        .masonry-item {
-            min-height: 100px;
-            background: lighten($color-background-1, 30);
-        }
-
-        .masonry-item-content {
-            position: absolute;
-                top: 50%;
-                left: 20px;
-                right: 20px;
-            transform: translate(0, -50%);
-        }
-
-            .title {
-                display: inline-block;
-                border-radius: 2px;
-            }
-    }
-
-    @include media-smaller("sm") {
-        .masonry-item {
-            box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.5);
-        }
-
-            .title {
-                font-size: 14px;
-                text-align: center;
-            }
     }
 }

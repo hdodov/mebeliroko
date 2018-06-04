@@ -20,6 +20,12 @@ fields:
       bg: Заглавие
     type: text
 
+  slogan:
+    label:
+      en: Slogan
+      bg: Мото
+    type: text
+
   logo:
     label:
       en: Logo

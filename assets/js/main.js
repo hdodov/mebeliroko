@@ -7,6 +7,7 @@ $(function () {
             },
             "screen and (min-width: 768px)": {
                 columns: 3,
+                allowEmptyColumns: false,
                 columnClasses: ['masonry-column']
             },
         });
