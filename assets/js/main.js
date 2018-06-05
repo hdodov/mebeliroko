@@ -10,9 +10,16 @@
     });
 })();
 
-$(function () {
-    var $grids = $('.masonry-grid')
-    ,   $galleries = $('.gallery');
+(function () {
+    var $galleries = $('.gallery');
+
+    if ($galleries.length) {
+        $galleries.roccoGallery();
+    }
+})();
+
+$(window).on('load', function () {
+    var $grids = $('.masonry-grid');
 
     if ($grids.length) {
         $grids.masonry({
@@ -20,9 +27,5 @@ $(function () {
             transitionDuration: 0,
             percentPosition: true
         }).addClass('is-laid');
-    }
-
-    if ($galleries.length) {
-        $galleries.roccoGallery();
     }
 });
