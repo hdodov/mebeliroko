@@ -8,7 +8,10 @@
         justify-content: center;
 
         margin: -15px;
-        transition: opacity $transition-grid-items-fade;
+        transition:
+            visibility $transition-grid-items-fade,
+            opacity $transition-grid-items-fade;
+        visibility: hidden;
         opacity: 0;
 
         &[data-items="2"] {
@@ -18,6 +21,7 @@
         }
 
         &.is-laid {
+            visibility: visible;
             opacity: 1;
         }
 

@@ -3,7 +3,7 @@
 echo js('assets/node_modules/jquery/dist/jquery.slim.min.js');
 
 if (!empty($loadMasonry)) {
-    echo js('assets/node_modules/masonry-layout/dist/masonry.pkgd.js');
+    echo js('assets/node_modules/masonry-layout/dist/masonry.pkgd.min.js');
 }
 
 if (!empty($loadLightbox)) {

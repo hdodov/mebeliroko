@@ -75,12 +75,14 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: -15px;
-  -webkit-transition: opacity 0.16s ease-out;
-  transition: opacity 0.16s ease-out;
+  -webkit-transition: visibility 0.16s ease-out, opacity 0.16s ease-out;
+  transition: visibility 0.16s ease-out, opacity 0.16s ease-out;
+  visibility: hidden;
   opacity: 0; }
   .masonry-grid[data-items="2"] .masonry-item-wrapper {
     width: 50%; }
   .masonry-grid.is-laid {
+    visibility: visible;
     opacity: 1; }
   .masonry-grid.large {
     margin: -2px; }
