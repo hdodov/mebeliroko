@@ -15,20 +15,22 @@
             <?php endif; ?>
         </h1>
 
-        <div class="masonry-grid link-grid">
-            <?php foreach ($tags as $tag): ?>
-                <?php $coverUrl = ($tag['cover']) ? thumb($tag['cover'], array('width' => 340, 'height' => 500))->url() : null; ?>
+        <div class="masonry-grid-wrapper">
+            <div class="masonry-grid link-grid">
+                <?php foreach ($tags as $tag): ?>
+                    <?php $coverUrl = ($tag['cover']) ? thumb($tag['cover'], array('width' => 340, 'height' => 500))->url() : null; ?>
 
-                <a class="item-link" href="<?= $tag['url']; ?>">
-                    <div class="masonry-item">
-                        <img src="<?= $coverUrl; ?>"/>
-                        
-                        <div class="masonry-item-content">
-                            <h2 class="title"><?= $tag['title']; ?></h2>
+                    <a class="masonry-item-wrapper item-link" href="<?= $tag['url']; ?>">
+                        <div class="masonry-item">
+                            <img src="<?= $coverUrl; ?>"/>
+                            
+                            <div class="masonry-item-content">
+                                <h2 class="title"><?= $tag['title']; ?></h2>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            <?php endforeach; ?>
+                    </a>
+                <?php endforeach; ?>
+            </div>
         </div>
     </main>
 

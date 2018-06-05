@@ -10,35 +10,18 @@
     });
 })();
 
-(function () {
-    $('.masonry-grid').each(function (i, grid) {
-        savvior.init('.masonry-grid', {
-            "screen and (max-width: 767px)": {
-                columns: 2,
-                allowEmptyColumns: false,
-                columnClasses: ['masonry-column']
-            },
-            "screen and (min-width: 768px)": {
-                columns: 3,
-                allowEmptyColumns: false,
-                columnClasses: ['masonry-column']
-            },
-        });
-    });
+$(function () {
+    var $grids = $('.masonry-grid')
+    ,   $galleries = $('.gallery');
 
-    window.addEventListener('savvior:setup', function (event) {
-        var $element = $(event.detail && event.detail.element);
-        if ($element.hasClass('gallery')) {
-            $element.roccoGallery();
-        }
-    });
+    if ($grids.length) {
+        $grids.masonry({
+            itemSelector: '.masonry-item-wrapper',
+            percentPosition: true
+        }).addClass('is-laid');
+    }
 
-    // var elem = document.querySelector('.masonry-grid');
-    
-    // if (elem) {
-    //     var msnry = new Masonry(elem, {
-    //         itemSelector: '.masonry-item',
-    //         percentPosition: true
-    //     });
-    // } 
-})();
+    if ($galleries.length) {
+        $galleries.roccoGallery();
+    }
+});

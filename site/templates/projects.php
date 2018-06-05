@@ -11,27 +11,29 @@
             <h1 class="title"><?= $pageTitle; ?></h1>
         </div>
 
-        <div class="masonry-grid link-grid">
-            <?php foreach ($visibleProjects as $project): ?>
-                <?php
-                    $coverUrl = $project->images()->sortBy('sort', 'asc')->first();
-                    if ($coverUrl) {
-                        $coverUrl = thumb($coverUrl, array('width' => 600, 'height' => 600))->url();
-                    }
-                ?>
+        <div class="masonry-grid-wrapper">
+            <div class="masonry-grid link-grid">
+                <?php foreach ($visibleProjects as $project): ?>
+                    <?php
+                        $coverUrl = $project->images()->sortBy('sort', 'asc')->first();
+                        if ($coverUrl) {
+                            $coverUrl = thumb($coverUrl, array('width' => 600, 'height' => 600))->url();
+                        }
+                    ?>
 
-                <a class="item-link" href="<?= $project->url(); ?>">
-                    <div class="masonry-item <?= r(!$coverUrl, 'no-image'); ?>">
-                        <?php if ($coverUrl): ?>
-                            <img src="<?= $coverUrl; ?>"/>
-                        <?php endif; ?>
-                        
-                        <div class="masonry-item-content">
-                            <h2 class="title"><?= $project->title(); ?></h2>
+                    <a class="masonry-item-wrapper item-link" href="<?= $project->url(); ?>">
+                        <div class="masonry-item <?= r(!$coverUrl, 'no-image'); ?>">
+                            <?php if ($coverUrl): ?>
+                                <img src="<?= $coverUrl; ?>"/>
+                            <?php endif; ?>
+                            
+                            <div class="masonry-item-content">
+                                <h2 class="title"><?= $project->title(); ?></h2>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            <?php endforeach; ?>
+                    </a>
+                <?php endforeach; ?>
+            </div>
         </div>
     </main>
 
