@@ -70,6 +70,14 @@
   opacity: 0; }
   .masonry-grid.is-laid {
     opacity: 1; }
+  .masonry-grid.large {
+    margin: -2px; }
+    .masonry-grid.large .masonry-item-wrapper {
+      width: 20%;
+      padding: 2px; }
+      .masonry-grid.large .masonry-item-wrapper img {
+        -webkit-transform: none;
+                transform: none; }
 
 .masonry-item-wrapper {
   display: block;
@@ -107,11 +115,19 @@
     -webkit-transform: scale(1.06);
             transform: scale(1.06); }
 
+@media (max-width: 991px) {
+  .masonry-grid.large .masonry-item-wrapper {
+    width: 25%; } }
+
 @media (max-width: 767px) {
   .masonry-grid-wrapper {
     margin: 40px 0; }
   .masonry-grid {
     margin: -7.5px; }
+    .masonry-grid.large {
+      margin: -15px; }
+      .masonry-grid.large .masonry-item-wrapper {
+        width: 33.3%; }
   .masonry-item-wrapper {
     width: 50%;
     padding: 7.5px; }

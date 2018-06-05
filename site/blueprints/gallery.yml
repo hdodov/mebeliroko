@@ -1,0 +1,15 @@
+title:
+  en: Gallery
+  bg: Галерия
+icon: image
+
+pages: false
+
+files: false
+
+fields:
+  title:
+    label:
+      en: Title
+      bg: Заглавие
+    type: text
