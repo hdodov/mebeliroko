@@ -11,15 +11,9 @@
             <h1 class="title"><?= $page->title(); ?></h1>
         </div>
 
-        <?php if ($mainContent->value()): ?>
-            <div class="page-text">
-                <?= kirbytext($mainContent); ?>
-            </div>
-        <?php endif; ?>
-
         <div class="masonry-grid-wrapper">
-            <div class="masonry-grid gallery" typeof="ImageGallery">
-                <?php foreach ($page->images()->sortBy('sort', 'asc') as $image): ?>
+            <div class="masonry-grid gallery large" typeof="ImageGallery">
+                <?php foreach ($allImages as $image): ?>
                     <div class="masonry-item-wrapper">
                         <figure class="masonry-item" property="associatedMedia" typeof="ImageObject">
                             <a
@@ -29,7 +23,7 @@
                                 data-height="<?= $image->height(); ?>"
                             >
                                 <img
-                                    src="<?= thumb($image, array('width' => 400, 'height' => 400))->url(); ?>"
+                                    src="<?= thumb($image, array('width' => 220))->url(); ?>"
                                     property="thumbnail"
                                     alt="<?= $image->caption(); ?>"
                                 >

@@ -14,6 +14,7 @@ $color-text-active-1: #ffffff;
 $font-family-1: Montserrat, 'Helvetica Neue', Arial, sans-serif;
 
 $transition-1: 0.16s ease-out;
+$transition-grid-items-fade: $transition-1;
 $transition-tag-box: 0.4s cubic-bezier(0.27, 0.73, 0.25, 1);
 $transition-menu-hover: $transition-1;
 $transition-tag-hover: 0.1s ease;

@@ -4,6 +4,7 @@ pages:
   template:
     - home
     - projects
+    - gallery
 
 files:
   fields:
