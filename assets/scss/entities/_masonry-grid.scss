@@ -3,9 +3,19 @@
 }
 
     .masonry-grid {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
         margin: -15px;
         transition: opacity $transition-grid-items-fade;
         opacity: 0;
+
+        &[data-items="2"] {
+            .masonry-item-wrapper {
+                width: 50%;
+            }
+        }
 
         &.is-laid {
             opacity: 1;

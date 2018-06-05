@@ -17,6 +17,7 @@ $(function () {
     if ($grids.length) {
         $grids.masonry({
             itemSelector: '.masonry-item-wrapper',
+            transitionDuration: 0,
             percentPosition: true
         }).addClass('is-laid');
     }

@@ -12,7 +12,7 @@
         </div>
 
         <div class="masonry-grid-wrapper">
-            <div class="masonry-grid link-grid">
+            <div class="masonry-grid link-grid" data-items="<?= count($visibleProjects); ?>">
                 <?php foreach ($visibleProjects as $project): ?>
                     <?php
                         $coverUrl = $project->images()->sortBy('sort', 'asc')->first();
