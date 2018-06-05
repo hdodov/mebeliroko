@@ -6,6 +6,8 @@
   border-radius: 4px;
   -webkit-box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.5);
           box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.5); }
+  .link-grid .masonry-item.no-image .masonry-item-content {
+    position: relative; }
 
 .link-grid .masonry-item-content {
   display: -webkit-box;
@@ -61,7 +63,8 @@
 .masonry-grid {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin: 60px 0; }
   .masonry-grid .masonry-column {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 0px;
@@ -101,15 +104,17 @@
       -webkit-transform: scale(1.06);
               transform: scale(1.06); }
   @media (max-width: 767px) {
-    .masonry-grid .masonry-column {
-      margin-top: -15px;
-      margin-bottom: -15px; }
-      .masonry-grid .masonry-column + .masonry-column {
-        margin-left: 15px; }
-      .masonry-grid .masonry-column .masonry-item {
-        margin: 15px 0; }
-        .masonry-grid .masonry-column .masonry-item:before {
-          display: none; } }
+    .masonry-grid {
+      margin: 40px 0; }
+      .masonry-grid .masonry-column {
+        margin-top: -15px;
+        margin-bottom: -15px; }
+        .masonry-grid .masonry-column + .masonry-column {
+          margin-left: 15px; }
+        .masonry-grid .masonry-column .masonry-item {
+          margin: 15px 0; }
+          .masonry-grid .masonry-column .masonry-item:before {
+            display: none; } }
 
 .pswp {
   pointer-events: none; }
@@ -277,7 +282,7 @@ body {
   @media (max-width: 767px) {
     body {
       padding-left: 0;
-      padding-top: 49px; } }
+      padding-top: 56px; } }
 
 h1, h2 {
   letter-spacing: 1px; }
@@ -292,58 +297,31 @@ h1, h2, h3 {
   position: absolute;
   left: -10000px; }
 
-h1.site-title {
+.site-title {
   margin: 120px 0;
   font-size: 48px;
   line-height: 1.25;
   text-align: center; }
-  h1.site-title .slogan {
+  .site-title .slogan {
     display: block;
     font-size: 24px;
     font-weight: normal; }
 
-.container-wrapper {
-  height: 100%; }
-  .container-wrapper.center {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-    .container-wrapper.center .container-wrapper-inner {
-      -webkit-box-flex: 1;
-          -ms-flex: 1 0 auto;
-              flex: 1 0 auto;
-      max-height: 100%; }
-
-.container {
-  margin-top: 80px;
-  margin-bottom: 80px;
+main.container {
+  margin-top: 40px;
+  margin-bottom: 180px;
   padding: 0 30px; }
-  .container.limited {
-    max-width: 800px; }
-
-.items-row {
-  padding: 15px 0; }
-  .items-row .ratio-box {
-    margin: 15px 0; }
 
 @media (max-width: 767px) {
-  .container {
+  .site-title {
+    margin: 50px 0;
+    font-size: 30px; }
+    .site-title .slogan {
+      font-size: 18px; }
+  main.container {
     margin-top: 30px;
-    margin-bottom: 30px;
-    padding: 0 15px; }
-  .items-row {
-    margin: 0 -7.5px;
-    padding: 7.5px 0; }
-    .items-row > div {
-      padding: 0 7.5px; }
-    .items-row .ratio-box {
-      margin: 7.5px 0; } }
+    margin-bottom: 80px;
+    padding: 0 15px; } }
 
 body.mobile-nav-active {
   overflow: hidden; }
@@ -522,7 +500,7 @@ header {
               user-select: none; }
     .languages li a {
       padding: 5px;
-      text-decoration: underline; }
+      text-decoration: none; }
 
 /*!
  * Hamburgers
@@ -618,8 +596,8 @@ header {
   display: block; }
 
 .page-head {
-  margin-top: 80px;
-  margin-bottom: 20px;
+  margin-top: 100px;
+  margin-bottom: 40px;
   text-align: center; }
   .page-head .title {
     font-size: 36px;
@@ -633,13 +611,13 @@ header {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
-  .gallery figure {
+  .gallery figure, .gallery figure a {
     cursor: -webkit-zoom-in;
     cursor: zoom-in; }
 
 @media (max-width: 767px) {
   .page-head {
-    margin-top: 30px; }
+    margin: 40px 0; }
     .page-head .title {
       font-size: 24px; }
   .page-text {

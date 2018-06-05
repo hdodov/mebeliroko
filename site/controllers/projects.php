@@ -8,7 +8,10 @@ return function ($site, $pages, $page) {
 
     if ($filterTags) {
         $visibleProjects = $visibleProjects->filterBy('tags', $filterTags, ',');
+        $pageTitle = $filterTags;
+    } else {
+        $pageTitle = $page->title();
     }
 
-    return compact('visibleProjects', 'filterTags', 'availableTags');
+    return compact('visibleProjects', 'filterTags', 'availableTags', 'pageTitle');
 };

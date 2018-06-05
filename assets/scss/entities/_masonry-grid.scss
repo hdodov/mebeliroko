@@ -1,5 +1,6 @@
 .masonry-grid {
     display: flex;
+    margin: 60px 0;
 
     .masonry-column {
         flex: 1 0 0;
@@ -49,6 +50,8 @@
         }
 
     @include media-smaller("sm") {
+        margin: 40px 0;
+
         .masonry-column {
             margin-top: -15px;
             margin-bottom: -15px;

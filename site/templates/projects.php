@@ -8,7 +8,7 @@
 
     <main class="container">
         <div class="page-head">
-            <h1 class="title"><?= $page->title(); ?></h1>
+            <h1 class="title"><?= $pageTitle; ?></h1>
         </div>
 
         <div class="masonry-grid link-grid">
@@ -21,8 +21,10 @@
                 ?>
 
                 <a class="item-link" href="<?= $project->url(); ?>">
-                    <div class="masonry-item">
-                        <img src="<?= $coverUrl; ?>"/>
+                    <div class="masonry-item <?= r(!$coverUrl, 'no-image'); ?>">
+                        <?php if ($coverUrl): ?>
+                            <img src="<?= $coverUrl; ?>"/>
+                        <?php endif; ?>
                         
                         <div class="masonry-item-content">
                             <h2 class="title"><?= $project->title(); ?></h2>

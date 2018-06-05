@@ -11,7 +11,7 @@
             <h1 class="title"><?= $page->title(); ?></h1>
         </div>
 
-        <?php if ($mainContent): ?>
+        <?php if ($mainContent->value()): ?>
             <div class="page-text">
                 <?= kirbytext($mainContent); ?>
             </div>

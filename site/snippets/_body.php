@@ -1,18 +1,21 @@
-<?= js('assets/node_modules/jquery/dist/jquery.slim.min.js'); ?>
+<?php
 
-<?php if (!empty($loadMasonry)): ?>
-    <?= js('assets/node_modules/enquire.js/dist/enquire.min.js'); ?>
-    <?= js('assets/node_modules/savvior/dist/savvior.js'); ?>
-<?php endif; ?>
+echo js('assets/node_modules/jquery/dist/jquery.slim.min.js');
 
-<?php if (!empty($loadLightbox)): ?>
-    <?= snippet('photoswipe'); ?>
-    <?= css('assets/node_modules/photoswipe/dist/photoswipe.css'); ?>
-    <?= css('assets/node_modules/photoswipe/dist/default-skin/default-skin.css'); ?>
+if (!empty($loadMasonry)) {
+    echo js('assets/node_modules/enquire.js/dist/enquire.min.js');
+    echo js('assets/node_modules/savvior/dist/savvior.js');
+    //echo js('assets/node_modules/masonry-layout/dist/masonry.pkgd.js');
+}
 
-    <?= js('assets/node_modules/photoswipe/dist/photoswipe.min.js'); ?>
-    <?= js('assets/node_modules/photoswipe/dist/photoswipe-ui-default.min.js'); ?>
-    <?= js('assets/js/jquery-roccoGallery.js'); ?>
-<?php endif; ?>
+if (!empty($loadLightbox)) {
+    echo snippet('photoswipe');
+    echo css('assets/node_modules/photoswipe/dist/photoswipe.css');
+    echo css('assets/node_modules/photoswipe/dist/default-skin/default-skin.css');
 
-<?= js('assets/js/main.js'); ?>
+    echo js('assets/node_modules/photoswipe/dist/photoswipe.min.js');
+    echo js('assets/node_modules/photoswipe/dist/photoswipe-ui-default.min.js');
+    echo js('assets/js/jquery-roccoGallery.js');
+}
+
+echo js('assets/js/main.js');

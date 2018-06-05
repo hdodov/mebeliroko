@@ -29,13 +29,13 @@
     function initGallery(gallery) {
         var $gallery = $(gallery);
 
-        var items = $gallery.children().map(function (index, child) {
-            var $child = $(child)
-            ,   $figure = $child.find('figure')
+        var items = $gallery.find('figure').map(function (index, child) {
+            var $figure = $(child)
             ,   $anchor = $figure.find('a')
             ,   $img = $anchor.find('img');
 
-            $figure.on('click', function () {
+            $figure.on('click', function (event) {
+                event.preventDefault();
                 openPhotoSwipe(items, index);
             });
 
