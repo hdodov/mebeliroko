@@ -1,0 +1,53 @@
+title:
+  en: About
+  bg: За нас
+icon: users
+
+pages: false
+
+files:
+  fields:
+    caption:
+      label:
+        en: Caption
+        bg: Надпис
+
+fields:
+  title:
+    label:
+      en: Title
+      bg: Заглавие
+    type: text
+  members:
+    label:
+      en: Team
+      bg: Екип
+    type: structure
+    fields:
+      image:
+        label:
+          en: Picture
+          bg: Снимка
+        type: image
+        translate: false
+      name:
+        label:
+          en: Name
+          bg: Име
+        type: text
+      title:
+        label:
+          en: Title
+          bg: Длъжност
+        type: text
+      text:
+        label:
+          en: About
+          bg: Описание
+        type: textarea
+  gallery:
+    label:
+      en: Gallery
+      bg: Галерия
+    type: gallery
+    aspectRatio: 4:3

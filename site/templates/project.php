@@ -9,35 +9,18 @@
     <main class="container">
         <div class="page-head">
             <h1 class="title"><?= $page->title(); ?></h1>
+
+            <?php if ($mainContent->value()): ?>
+                <div class="text">
+                    <?= kirbytext($mainContent); ?>
+                </div>
+            <?php endif; ?>
         </div>
 
-        <?php if ($mainContent->value()): ?>
-            <div class="page-text">
-                <?= kirbytext($mainContent); ?>
-            </div>
-        <?php endif; ?>
-
-        <div class="masonry-grid-wrapper">
-            <div class="masonry-grid gallery medium" typeof="ImageGallery">
-                <?php foreach ($page->images()->sortBy('sort', 'asc') as $image): ?>
-                    <figure class="masonry-item-wrapper" property="associatedMedia" typeof="ImageObject">
-                        <a
-                            class="masonry-item"
-                            href="<?= $image->url(); ?>"
-                            property="contentUrl"
-                            data-width="<?= $image->width(); ?>"
-                            data-height="<?= $image->height(); ?>"
-                        >
-                            <img
-                                src="<?= thumb($image, array('width' => 350))->url(); ?>"
-                                property="thumbnail"
-                                alt="<?= $image->caption(); ?>"
-                            >
-                        </a>
-                    </figure>
-                <?php endforeach; ?>
-            </div>
-        </div>
+        <?= snippet('lightbox-gallery', array(
+            'images' => $page->images()->sortBy('sort', 'asc'),
+            'type' => 'medium'
+        )); ?>
     </main>
 
     <?= snippet('_body', array(

@@ -5,6 +5,7 @@ pages:
     - home
     - projects
     - gallery
+    - about
 
 files:
   fields:

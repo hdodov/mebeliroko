@@ -1,0 +1,4 @@
+[submodule "site/fields/gallery"]
+	path = site/fields/gallery
+	url = https://github.com/hdodov/kirby-gallery.git
+	branch = master

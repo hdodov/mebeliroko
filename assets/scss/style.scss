@@ -13,3 +13,59 @@
 @import 'partials/_general';
 @import 'partials/_header';
 @import 'partials/_languages';
+
+@include media-smaller("sm") {
+    .page-about {
+        .masonry-grid-wrapper {
+            margin: 100px auto;
+        }
+    }
+}
+
+.team-container {
+    margin-bottom: -40px;
+}
+
+.team-member {
+    margin-bottom: 30px;
+
+    .image-wrapper {
+        margin-bottom: 15px;
+        padding-bottom: 56.25%;
+        position: relative;
+
+        .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+            width: 100%;
+            height: 100%;
+            position: absolute;
+                top: 0;
+                left: 0;
+
+            border-radius: 2px;
+            background: $color-placeholder;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .head {
+        margin-bottom: 15px;
+
+        .name {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .title {
+            margin: 0;
+            color: $color-text-2;
+        }
+    }
+}
