@@ -302,6 +302,99 @@
       background: #1680ef;
       text-decoration: none; }
 
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 12px 12px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+
+.hamburger-box {
+  width: 24px;
+  height: 14px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -1px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 2px;
+    position: absolute;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+    -webkit-transition-timing-function: ease;
+            transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -6px; }
+  .hamburger-inner::after {
+    bottom: -6px; }
+
+/*
+   * Slider Reverse
+   */
+.hamburger--slider-r .hamburger-inner {
+  top: 1px; }
+  .hamburger--slider-r .hamburger-inner::before {
+    top: 6px;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
+    transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
+    -webkit-transition-timing-function: ease;
+            transition-timing-function: ease;
+    -webkit-transition-duration: 0.15s;
+            transition-duration: 0.15s; }
+  .hamburger--slider-r .hamburger-inner::after {
+    top: 12px; }
+
+.hamburger--slider-r.is-active .hamburger-inner {
+  -webkit-transform: translate3d(0, 6px, 0) rotate(-45deg);
+          transform: translate3d(0, 6px, 0) rotate(-45deg); }
+  .hamburger--slider-r.is-active .hamburger-inner::before {
+    -webkit-transform: rotate(45deg) translate3d(3.42857px, -4px, 0);
+            transform: rotate(45deg) translate3d(3.42857px, -4px, 0);
+    opacity: 0; }
+  .hamburger--slider-r.is-active .hamburger-inner::after {
+    -webkit-transform: translate3d(0, -12px, 0) rotate(90deg);
+            transform: translate3d(0, -12px, 0) rotate(90deg); }
+
+.hamburger-box {
+  display: block; }
+
 html {
   height: 100%; }
 
@@ -327,12 +420,34 @@ h1, h2 {
 h1, h2, h3 {
   color: #3e3e3e; }
 
+.gallery {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .gallery figure, .gallery figure a {
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in; }
+
 .hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
   position: absolute;
   left: -10000px; }
+
+main.container {
+  margin-top: 40px;
+  margin-bottom: 180px;
+  padding: 0 30px; }
+
+.page-head {
+  margin-top: 100px;
+  margin-bottom: 40px;
+  text-align: center; }
+  .page-head .title {
+    font-size: 36px;
+    text-align: center; }
 
 .site-title {
   margin: 120px 0;
@@ -344,21 +459,26 @@ h1, h2, h3 {
     font-size: 24px;
     font-weight: normal; }
 
-main.container {
-  margin-top: 40px;
-  margin-bottom: 180px;
-  padding: 0 30px; }
+.page-text {
+  max-width: 40em;
+  margin: 50px auto; }
 
 @media (max-width: 767px) {
+  main.container {
+    margin-top: 30px;
+    margin-bottom: 80px;
+    padding: 0 15px; }
+  .page-head {
+    margin: 40px 0; }
+    .page-head .title {
+      font-size: 24px; }
   .site-title {
     margin: 50px 0;
     font-size: 30px; }
     .site-title .slogan {
       font-size: 18px; }
-  main.container {
-    margin-top: 30px;
-    margin-bottom: 80px;
-    padding: 0 15px; } }
+  .page-text {
+    margin: 30px auto; } }
 
 body.mobile-nav-active {
   overflow: hidden; }
@@ -538,125 +658,3 @@ header {
     .languages li a {
       padding: 5px;
       text-decoration: none; }
-
-/*!
- * Hamburgers
- * @description Tasty CSS-animated hamburgers
- * @author Jonathan Suh @jonsuh
- * @site https://jonsuh.com/hamburgers
- * @link https://github.com/jonsuh/hamburgers
- */
-.hamburger {
-  padding: 12px 12px;
-  display: inline-block;
-  cursor: pointer;
-  -webkit-transition-property: opacity, -webkit-filter;
-  transition-property: opacity, -webkit-filter;
-  transition-property: opacity, filter;
-  transition-property: opacity, filter, -webkit-filter;
-  -webkit-transition-duration: 0.15s;
-          transition-duration: 0.15s;
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
-  font: inherit;
-  color: inherit;
-  text-transform: none;
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  overflow: visible; }
-  .hamburger:hover {
-    opacity: 0.7; }
-
-.hamburger-box {
-  width: 24px;
-  height: 14px;
-  display: inline-block;
-  position: relative; }
-
-.hamburger-inner {
-  display: block;
-  top: 50%;
-  margin-top: -1px; }
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 24px;
-    height: 2px;
-    background-color: #fff;
-    border-radius: 2px;
-    position: absolute;
-    -webkit-transition-property: -webkit-transform;
-    transition-property: -webkit-transform;
-    transition-property: transform;
-    transition-property: transform, -webkit-transform;
-    -webkit-transition-duration: 0.15s;
-            transition-duration: 0.15s;
-    -webkit-transition-timing-function: ease;
-            transition-timing-function: ease; }
-  .hamburger-inner::before, .hamburger-inner::after {
-    content: "";
-    display: block; }
-  .hamburger-inner::before {
-    top: -6px; }
-  .hamburger-inner::after {
-    bottom: -6px; }
-
-/*
-   * Slider Reverse
-   */
-.hamburger--slider-r .hamburger-inner {
-  top: 1px; }
-  .hamburger--slider-r .hamburger-inner::before {
-    top: 6px;
-    -webkit-transition-property: opacity, -webkit-transform;
-    transition-property: opacity, -webkit-transform;
-    transition-property: transform, opacity;
-    transition-property: transform, opacity, -webkit-transform;
-    -webkit-transition-timing-function: ease;
-            transition-timing-function: ease;
-    -webkit-transition-duration: 0.15s;
-            transition-duration: 0.15s; }
-  .hamburger--slider-r .hamburger-inner::after {
-    top: 12px; }
-
-.hamburger--slider-r.is-active .hamburger-inner {
-  -webkit-transform: translate3d(0, 6px, 0) rotate(-45deg);
-          transform: translate3d(0, 6px, 0) rotate(-45deg); }
-  .hamburger--slider-r.is-active .hamburger-inner::before {
-    -webkit-transform: rotate(45deg) translate3d(3.42857px, -4px, 0);
-            transform: rotate(45deg) translate3d(3.42857px, -4px, 0);
-    opacity: 0; }
-  .hamburger--slider-r.is-active .hamburger-inner::after {
-    -webkit-transform: translate3d(0, -12px, 0) rotate(90deg);
-            transform: translate3d(0, -12px, 0) rotate(90deg); }
-
-.hamburger-box {
-  display: block; }
-
-.page-head {
-  margin-top: 100px;
-  margin-bottom: 40px;
-  text-align: center; }
-  .page-head .title {
-    font-size: 36px;
-    text-align: center; }
-
-.page-text {
-  max-width: 40em;
-  margin: 50px auto; }
-
-.gallery {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
-  .gallery figure, .gallery figure a {
-    cursor: -webkit-zoom-in;
-    cursor: zoom-in; }
-
-@media (max-width: 767px) {
-  .page-head {
-    margin: 40px 0; }
-    .page-head .title {
-      font-size: 24px; }
-  .page-text {
-    margin: 30px auto; } }

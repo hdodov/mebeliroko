@@ -1,76 +1,63 @@
-html {
-    height: 100%;
-}
-
-body {
-    padding-top: 1px;
-    padding-bottom: 1px;
-    height: 100%;
- 
-    color: $color-text-1;
-    font-family: $font-family-1;
-    font-size: 16px;
-    line-height: 1.5;
-
-    @media (max-width: #{1140px + $header-width * 2}) {
-        padding-left: $header-width;
-    }
-
-    @include media-smaller("sm") {
-        padding-left: 0;
-        padding-top: $header-height-mobile;
-    }
-}
-
-h1, h2 {
-    letter-spacing: 1px;
-}
-
-h1, h2, h3 {
-    color: $color-heading;
-}
-
-.hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-
-    position: absolute;
-        left: -10000px;
-}
-
-.site-title {
-    margin: 120px 0;
-    font-size: 48px;
-    line-height: 1.25;
-    text-align: center;
-
-    .slogan {
-        display: block;
-        font-size: 24px;
-        font-weight: normal;
-    }
-}
-
 main.container {
     margin-top: 40px;
     margin-bottom: 180px;
     padding: 0 30px; 
 }
 
-@include media-smaller("sm") {
-    .site-title {
-        margin: 50px 0;
-        font-size: 30px;
+    .page-head {
+        margin-top: 100px;
+        margin-bottom: 40px;
+        text-align: center;
 
-        .slogan {
-            font-size: 18px;
+        .title {
+            font-size: 36px;
+            text-align: center;
         }
     }
 
+    .site-title {
+        margin: 120px 0;
+        font-size: 48px;
+        line-height: 1.25;
+        text-align: center;
+
+        .slogan {
+            display: block;
+            font-size: 24px;
+            font-weight: normal;
+        }
+    }
+
+    .page-text {
+        max-width: 40em;
+        margin: 50px auto;
+    }
+
+@include media-smaller("sm") {
     main.container {
         margin-top: 30px;
         margin-bottom: 80px;
         padding: 0 15px;
     }
+
+        .page-head {
+            margin: 40px 0;
+            
+            .title {
+                font-size: 24px;
+            }
+        }
+
+        .site-title {
+            margin: 50px 0;
+            font-size: 30px;
+
+            .slogan {
+                font-size: 18px;
+            }
+        }
+
+        .page-text {
+            margin: 30px auto;
+        }
 }

@@ -7,64 +7,9 @@
 @import 'entities/_ratio-box';
 @import 'entities/_tag-box';
 @import 'entities/_tag-cloud';
+@import 'entities/_hamburger';
 
+@import 'partials/_elements';
 @import 'partials/_general';
 @import 'partials/_header';
 @import 'partials/_languages';
-
-$hamburger-padding-x: 12px;
-$hamburger-padding-y: 12px;
-$hamburger-layer-width: 24px;
-$hamburger-layer-height: 2px;
-$hamburger-layer-spacing: 4px;
-$hamburger-layer-color: #fff;
-$hamburger-layer-border-radius: 2px;
-$hamburger-types: (
-    slider-r
-);
-
-@import '../node_modules/hamburgers/_sass/hamburgers/hamburgers';
-
-.hamburger-box {
-    display: block; // remove whitespace below
-}
-
-.page-head {
-    margin-top: 100px;
-    margin-bottom: 40px;
-    text-align: center;
-
-    .title {
-        font-size: 36px;
-        text-align: center;
-    }
-}
-
-.page-text {
-    max-width: 40em;
-    margin: 50px auto;
-}
-
-.gallery {
-    user-select: none;
-
-    figure {
-        &, a {
-            cursor: zoom-in;
-        }
-    }
-}
-
-@include media-smaller("sm") {
-    .page-head {
-        margin: 40px 0;
-        
-        .title {
-            font-size: 24px;
-        }
-    }
-
-    .page-text {
-        margin: 30px auto;
-    }
-}
