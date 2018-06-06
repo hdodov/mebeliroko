@@ -41,7 +41,8 @@ $hamburger-types: (
 }
 
 .page-text {
-    margin: 50px 0;
+    max-width: 40em;
+    margin: 50px auto;
 }
 
 .gallery {
@@ -64,6 +65,6 @@ $hamburger-types: (
     }
 
     .page-text {
-        margin: 30px 0;
+        margin: 30px auto;
     }
 }

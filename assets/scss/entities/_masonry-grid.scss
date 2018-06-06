@@ -26,10 +26,10 @@
         }
 
         &.medium {
-            margin: -7.5px;
+            margin: -7px;
 
             .masonry-item-wrapper {
-                padding: 7.5px;
+                padding: 7px;
             }
         }
 
@@ -43,10 +43,6 @@
                 .masonry-item {
                     border-radius: 0;
                 }
-
-                    img {
-                        //transform: none; // for performance
-                    }
             }
         }
     }
@@ -54,6 +50,7 @@
         .masonry-item-wrapper {
             display: block;
             width: 33.3%;
+            margin: 0;
             padding: 15px;
 
             &:hover {
@@ -68,10 +65,11 @@
         }
 
             .masonry-item {
+                display: block;
                 margin: 0;
-                border-radius: 2px;
                 overflow: hidden;
                 position: relative;
+                border-radius: 2px;
 
                 &:before {
                     content: '';
@@ -106,7 +104,7 @@
     }
 
         .masonry-grid {
-            margin: -7.5px;
+            margin: -7px;
 
             &.large {
                 margin: -15px;
@@ -119,7 +117,7 @@
 
             .masonry-item-wrapper {
                 width: 50%;
-                padding: 7.5px;
+                padding: 7px;
 
                 .masonry-item:before {
                     display: none;
