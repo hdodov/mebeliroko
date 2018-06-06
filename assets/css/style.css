@@ -84,19 +84,27 @@
   .masonry-grid.is-laid {
     visibility: visible;
     opacity: 1; }
+  .masonry-grid.medium {
+    margin: -7.5px; }
+    .masonry-grid.medium .masonry-item-wrapper {
+      padding: 7.5px; }
   .masonry-grid.large {
     margin: -2px; }
     .masonry-grid.large .masonry-item-wrapper {
       width: 20%;
       padding: 2px; }
-      .masonry-grid.large .masonry-item-wrapper img {
-        -webkit-transform: none;
-                transform: none; }
+      .masonry-grid.large .masonry-item-wrapper .masonry-item {
+        border-radius: 0; }
 
 .masonry-item-wrapper {
   display: block;
   width: 33.3%;
   padding: 15px; }
+  .masonry-item-wrapper:hover .masonry-item:before {
+    opacity: 0; }
+  .masonry-item-wrapper:hover img {
+    -webkit-transform: scale(1.04) translate3d(0, 0, 0);
+            transform: scale(1.04) translate3d(0, 0, 0); }
 
 .masonry-item {
   margin: 0;
@@ -113,21 +121,16 @@
     height: 100%;
     background: #000000;
     opacity: 0.3;
-    -webkit-transition: opacity 0.2s ease-out;
-    transition: opacity 0.2s ease-out; }
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; }
   .masonry-item img {
     width: 100%;
     position: relative;
     z-index: 10;
-    -webkit-transition: -webkit-transform 0.2s ease-out;
-    transition: -webkit-transform 0.2s ease-out;
-    transition: transform 0.2s ease-out;
-    transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out; }
-  .masonry-item:hover:before {
-    opacity: 0; }
-  .masonry-item:hover img {
-    -webkit-transform: scale(1.06);
-            transform: scale(1.06); }
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.27, 0.73, 0.25, 1);
+    transition: -webkit-transform 0.4s cubic-bezier(0.27, 0.73, 0.25, 1);
+    transition: transform 0.4s cubic-bezier(0.27, 0.73, 0.25, 1);
+    transition: transform 0.4s cubic-bezier(0.27, 0.73, 0.25, 1), -webkit-transform 0.4s cubic-bezier(0.27, 0.73, 0.25, 1); }
 
 @media (max-width: 991px) {
   .masonry-grid.large .masonry-item-wrapper {

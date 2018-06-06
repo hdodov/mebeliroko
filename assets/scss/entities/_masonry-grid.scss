@@ -9,8 +9,8 @@
 
         margin: -15px;
         transition:
-            visibility $transition-grid-items-fade,
-            opacity $transition-grid-items-fade;
+            visibility $transition-grid-fade,
+            opacity $transition-grid-fade;
         visibility: hidden;
         opacity: 0;
 
@@ -25,6 +25,14 @@
             opacity: 1;
         }
 
+        &.medium {
+            margin: -7.5px;
+
+            .masonry-item-wrapper {
+                padding: 7.5px;
+            }
+        }
+
         &.large {
             margin: -2px;
 
@@ -32,9 +40,13 @@
                 width: 20%;
                 padding: 2px;
 
-                img {
-                    transform: none; // for performance
+                .masonry-item {
+                    border-radius: 0;
                 }
+
+                    img {
+                        //transform: none; // for performance
+                    }
             }
         }
     }
@@ -43,6 +55,16 @@
             display: block;
             width: 33.3%;
             padding: 15px;
+
+            &:hover {
+                .masonry-item:before {
+                    opacity: 0;
+                }
+
+                img {
+                    transform: scale(1.04) translate3d(0, 0, 0);
+                }
+            }
         }
 
             .masonry-item {
@@ -61,24 +83,14 @@
                     height: 100%;
                     background: $color-black;
                     opacity: 0.3;
-                    transition: opacity 0.2s ease-out;
+                    transition: opacity $transition-grid-items-fade;
                 }
 
                 img {
                     width: 100%;
                     position: relative;
                     z-index: 10;
-                    transition: transform 0.2s ease-out;
-                }
-
-                &:hover {
-                    &:before {
-                        opacity: 0;
-                    }
-
-                    img {
-                        transform: scale(1.06);
-                    }
+                    transition: transform $transition-grid-items-scale;
                 }
             }
 

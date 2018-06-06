@@ -18,7 +18,7 @@
         <?php endif; ?>
 
         <div class="masonry-grid-wrapper">
-            <div class="masonry-grid gallery" typeof="ImageGallery">
+            <div class="masonry-grid gallery medium" typeof="ImageGallery">
                 <?php foreach ($page->images()->sortBy('sort', 'asc') as $image): ?>
                     <div class="masonry-item-wrapper">
                         <figure class="masonry-item" property="associatedMedia" typeof="ImageObject">

@@ -1,4 +1,4 @@
-Title: Тераси
+Title: Solutions
 
 ----
 
@@ -6,4 +6,4 @@ Text:
 
 ----
 
-Tags: 
+Tags: Solutions

@@ -22,10 +22,10 @@ $(window).on('load', function () {
     var $grids = $('.masonry-grid');
 
     if ($grids.length) {
-        $grids.masonry({
+        var mas = $grids.masonry({
             itemSelector: '.masonry-item-wrapper',
             transitionDuration: 0,
             percentPosition: true
-        }).addClass('is-laid');
+        }).addClass('is-laid').masonry('layout');
     }
 });

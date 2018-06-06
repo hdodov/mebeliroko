@@ -28,9 +28,15 @@
     <div class="header-content">
         <nav role="navigation">
             <ul>
-                <?php foreach ($pages->visible() as $item): ?>
-                    <li class="<?= r($item->isActive(), 'is-active'); ?>">
-                        <a href="<?= $item->url(); ?>"><?= $item->title()->html(); ?></a>
+                <?php foreach ($pages->visible() as $page): ?>
+                    <?php
+                        if ($page->template() == 'projects') {
+                            continue;
+                        }
+                    ?>
+
+                    <li class="<?= r($page->isActive(), 'is-active'); ?>">
+                        <a href="<?= $page->url(); ?>"><?= $page->title()->html(); ?></a>
                     </li>
                 <?php endforeach; ?>
             </ul>
