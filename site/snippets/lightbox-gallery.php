@@ -14,24 +14,26 @@
     }
 ?>
 
-<div class="masonry-grid-wrapper">
-    <div class="masonry-grid gallery <?= r(!empty($type), $type); ?>" typeof="ImageGallery">
-        <?php foreach ($images as $image): ?>
-            <figure class="masonry-item-wrapper" property="associatedMedia" typeof="ImageObject">
-                <a
-                    class="masonry-item"
-                    href="<?= $image->url(); ?>"
-                    property="contentUrl"
-                    data-width="<?= $image->width(); ?>"
-                    data-height="<?= $image->height(); ?>"
-                >
-                    <img
-                        src="<?= thumb($image, $thumbnailOptions)->url(); ?>"
-                        property="thumbnailUrl"
-                        alt="<?= $image->caption(); ?>"
+<?php if (count($images) > 0): ?>
+    <div class="masonry-grid-wrapper">
+        <div class="masonry-grid gallery <?= r(!empty($type), $type); ?>" typeof="ImageGallery">
+            <?php foreach ($images as $image): ?>
+                <figure class="masonry-item-wrapper" property="associatedMedia" typeof="ImageObject">
+                    <a
+                        class="masonry-item"
+                        href="<?= $image->url(); ?>"
+                        property="contentUrl"
+                        data-width="<?= $image->width(); ?>"
+                        data-height="<?= $image->height(); ?>"
                     >
-                </a>
-            </figure>
-        <?php endforeach; ?>
+                        <img
+                            src="<?= thumb($image, $thumbnailOptions)->url(); ?>"
+                            property="thumbnailUrl"
+                            alt="<?= $image->caption(); ?>"
+                        >
+                    </a>
+                </figure>
+            <?php endforeach; ?>
+        </div>
     </div>
-</div>
+<?php endif; ?>
