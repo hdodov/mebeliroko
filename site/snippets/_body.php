@@ -16,4 +16,35 @@ if (!empty($loadLightbox)) {
     echo js('assets/js/jquery-roccoGallery.js');
 }
 
+if (!empty($loadMap)) {
+    $mapKey = c::get('google.maps.key');
+    $mapLocale = $site->language->code();
+
+    echo <<<HTML
+    <script type="text/javascript">
+        window.roccoMapData = {
+            zoom: parseInt("{$loadMap['zoom']}"),
+            location: {
+                lat: parseFloat("{$loadMap['lat']}"),
+                lng: parseFloat("{$loadMap['lng']}")
+            },
+            pin: {
+                fillColor: '#242424',
+                fillOpacity: 1,
+                strokeColor: '#000',
+                strokeWeight: 1.2,
+                strokeOpacity: 0.6
+            }
+        };
+    </script>
+HTML;
+
+    echo js("https://maps.googleapis.com/maps/api/js?key=$mapKey&language=$mapLocale&callback=GoogleMapsLoaded", array(
+        'async' => true,
+        'defer' => true
+    ));
+
+    echo js('assets/js/map.js');
+}
+
 echo js('assets/js/main.js');

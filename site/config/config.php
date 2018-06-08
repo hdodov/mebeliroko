@@ -1,7 +1,9 @@
 <?php
 
-c::set('license', 'put your license key here');
 c::set('debug', true);
+c::set('license', 'put your license key here');
+
+c::set('google.maps.key', 'AIzaSyAfmWnMXJVPTlpT8dS6TIrQzuq0IBJdEf0');
 c::set('languages', array(
   array(
     'code'    => 'bg',

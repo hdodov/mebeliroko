@@ -6,6 +6,7 @@ pages:
     - projects
     - gallery
     - about
+    - contacts
 
 files:
   fields:

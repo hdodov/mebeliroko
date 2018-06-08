@@ -1,0 +1,35 @@
+Title: Контакти
+
+----
+
+Links: 
+
+- 
+  type: email
+  name: Test
+  link: http://example.com
+  telephone: ""
+  email: fasf@asd.com
+  mail: test@foo.com
+- 
+  type: email
+  name: Abv
+  link: ""
+  telephone: ""
+  email: h.dodov@abv.bg
+
+----
+
+Location: 
+
+lat: "42.843429575225734"
+lng: "23.15152002441414"
+zoom: "11"
+
+----
+
+Locationsec: 
+
+lat: "45.817727076206644"
+lng: "-118.81724523437498"
+zoom: "9"

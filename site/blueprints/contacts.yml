@@ -1,0 +1,95 @@
+title:
+  en: Contacts
+  bg: Контакти
+icon: phone
+
+pages: false
+
+files: false
+
+fields:
+  title:
+    label:
+      en: Title
+      bg: Заглавие
+    type: text
+  links:
+    label:
+      en: Links
+      bg: Връзки
+    type: structure
+    style: table
+    entry:
+      - name
+      - type
+    fields:
+      type:
+        label:
+          en: Type
+          bg: Тип връзка
+        type: fieldtoggle
+        options:
+          facebook:
+            en: Facebook page
+            bg: Фейсбук страница
+          twitter:
+            en: Twitter account
+            bg: Туитър акаунт
+          email:
+            en: Email address
+            bg: Имейл адрес
+          telephone:
+            en: Telephone number
+            bg: Телефонен номер
+        show:
+          facebook: link
+          twitter: link
+          email: email
+          telephone: telephone
+        hide:
+          facebook: email telephone
+          twitter: email telephone
+          email: link telephone
+          telephone: link email
+      name:
+        label:
+          en: Name
+          bg: Име
+        type: text
+      link:
+        label:
+          en: Address
+          bg: Адрес
+        type: url
+      telephone:
+        label:
+          en: Number
+          bg: Номер
+        type: tel
+      mail:
+        label:
+          en: Address
+          bg: Адрес
+        type: email
+  location:
+    label:
+      en: Location
+      bg: Място
+    type: map
+    center:
+      lat: 45.21342
+      lng: -122.12413
+      zoom: 9
+    help: >
+      Foobar test!
+  locationsec:
+    label:
+      en: Location2
+      bg: Място2
+    type: map
+    center:
+      lat: 45.21342
+      lng: -122.12413
+      zoom: 9
+    help: >
+      Foobar test!

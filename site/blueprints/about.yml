@@ -29,7 +29,6 @@ fields:
           en: Picture
           bg: Снимка
         type: image
-        translate: false
       name:
         label:
           en: Name

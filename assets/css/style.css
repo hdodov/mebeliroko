@@ -696,3 +696,7 @@ header {
     .team-member .head .title {
       margin: 0;
       color: #989898; }
+
+.google-map {
+  width: 100%;
+  min-height: 400px; }
