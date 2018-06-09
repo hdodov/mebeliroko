@@ -71,25 +71,21 @@ fields:
           en: Address
           bg: Адрес
         type: email
-  location:
-    label:
-      en: Location
-      bg: Място
-    type: map
-    center:
-      lat: 45.21342
-      lng: -122.12413
-      zoom: 9
-    help: >
-      Foobar test!
-  locationsec:
-    label:
-      en: Location2
-      bg: Място2
-    type: map
-    center:
-      lat: 45.21342
-      lng: -122.12413
-      zoom: 9
-    help: >
-      Foobar test!
+  # location:
+  #   label:
+  #     en: Location
+  #     bg: Място
+  #   type: simplemap
+  #   translate: false
+  #   size: 16:9
+  #   settings:
+  #     zoom: 4
+  #     center:
+  #       lat: 1
+  #       lng: 1
+  #     disableDefaultUI: true
+  #     zoomControl: true
+  #     fullscreenControl: true
+  #     gestureHandling: cooperative
+  #   marker:
+  #     draggable: false

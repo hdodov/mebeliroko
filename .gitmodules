@@ -5,7 +5,3 @@
 [submodule "site/fields/fieldtoggle"]
 	path = site/fields/fieldtoggle
 	url = https://github.com/medienbaecker/kirby-fieldtoggle.git
-[submodule "site/plugins/map"]
-	path = site/plugins/map
-	url = https://github.com/hdodov/kirby-map-field.git
-    branch = master
