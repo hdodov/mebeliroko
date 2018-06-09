@@ -71,21 +71,19 @@ fields:
           en: Address
           bg: Адрес
         type: email
-  # location:
-  #   label:
-  #     en: Location
-  #     bg: Място
-  #   type: simplemap
-  #   translate: false
-  #   size: 16:9
-  #   settings:
-  #     zoom: 4
-  #     center:
-  #       lat: 1
-  #       lng: 1
-  #     disableDefaultUI: true
-  #     zoomControl: true
-  #     fullscreenControl: true
-  #     gestureHandling: cooperative
-  #   marker:
-  #     draggable: false
+  location:
+    label:
+      en: Location
+      bg: Място
+    type: simplemap
+    translate: false
+    ratio: 16:9
+    map:
+      zoom: 4
+      center:
+        lat: 0
+        lng: 0
+      disableDefaultUI: true
+      zoomControl: true
+      fullscreenControl: true
+      gestureHandling: cooperative

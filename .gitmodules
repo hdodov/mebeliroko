@@ -5,3 +5,6 @@
 [submodule "site/fields/fieldtoggle"]
 	path = site/fields/fieldtoggle
 	url = https://github.com/medienbaecker/kirby-fieldtoggle.git
+[submodule "site/fields/simplemap"]
+	path = site/fields/simplemap
+	url = https://github.com/hdodov/kirby-simplemap-field.git
