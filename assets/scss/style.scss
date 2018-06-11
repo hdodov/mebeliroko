@@ -72,5 +72,54 @@
 
 .google-map {
     width: 100%;
-    min-height: 400px;
+    padding-top: 56.25%;
+}
+
+.icon-links-list {
+    margin: -20px 0;
+    padding: 0;
+    list-style-type: none;
+
+    li {
+        margin: 20px 0;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-decoration: none;
+
+            color: $color-text-1;
+            transition: color $transition-icon-link-list-hover;
+
+            .icon-container {
+                border-color: $color-text-1;
+                transition: border-color $transition-icon-link-list-hover;
+            }
+
+            &:hover {
+                color: $color-text-2;
+
+                .icon-container {
+                    border-color: $color-text-2;
+                }
+            }
+        }
+    }
+
+            .icon-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 44px;
+                height: 44px;
+                margin-right: 12px;
+
+                border-radius: 50%;
+                border: 1px solid;
+
+                i {
+                    font-size: 16px;
+                }
+            }
 }

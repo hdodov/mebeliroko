@@ -19,71 +19,28 @@ fields:
       bg: Връзки
     type: structure
     style: table
-    entry:
-      - name
-      - type
     fields:
-      type:
-        label:
-          en: Type
-          bg: Тип връзка
-        type: fieldtoggle
-        options:
-          facebook:
-            en: Facebook page
-            bg: Фейсбук страница
-          twitter:
-            en: Twitter account
-            bg: Туитър акаунт
-          email:
-            en: Email address
-            bg: Имейл адрес
-          telephone:
-            en: Telephone number
-            bg: Телефонен номер
-        show:
-          facebook: link
-          twitter: link
-          email: email
-          telephone: telephone
-        hide:
-          facebook: email telephone
-          twitter: email telephone
-          email: link telephone
-          telephone: link email
-      name:
-        label:
-          en: Name
-          bg: Име
-        type: text
       link:
         label:
-          en: Address
-          bg: Адрес
-        type: url
-      telephone:
-        label:
-          en: Number
-          bg: Номер
-        type: tel
-      mail:
-        label:
-          en: Address
-          bg: Адрес
-        type: email
+          en: Link
+          bg: Линк
+        type: text
+        help:
+          en: "Use (link:), (tel:) and (email:) for proper link formatting."
+          bg: "Използвайте (link:), (tel:) и (email:) за правилно форматиране на връзката."
   location:
     label:
       en: Location
       bg: Място
     type: simplemap
+    help:
+      en: Drag the marker or click on the map to set a location.
+      bg: Влачете маркера или цъкнете на картата, за да изберете място.
     translate: false
     ratio: 16:9
     map:
-      zoom: 4
+      zoom: 2
       center:
         lat: 0
         lng: 0
-      disableDefaultUI: true
-      zoomControl: true
-      fullscreenControl: true
       gestureHandling: cooperative

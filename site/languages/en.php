@@ -9,3 +9,10 @@ l::set(array(
     'previous' => 'Previous',
     'next' => 'Next'
 ));
+
+l::set(array(
+    'form.name' => 'Name',
+    'form.email' => 'Email',
+    'form.message' => 'Write your message here...',
+    'form.submit' => 'Submit'
+));

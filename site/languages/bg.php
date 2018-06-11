@@ -9,3 +9,10 @@ l::set(array(
     'previous' => 'Назад',
     'next' => 'Напред'
 ));
+
+l::set(array(
+    'form.name' => 'Име',
+    'form.email' => 'Имейл',
+    'form.message' => 'Напишете съобщението си тук...',
+    'form.submit' => 'Изпрати'
+));

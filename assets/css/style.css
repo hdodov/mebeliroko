@@ -699,4 +699,50 @@ header {
 
 .google-map {
   width: 100%;
-  min-height: 400px; }
+  padding-top: 56.25%; }
+
+.icon-links-list {
+  margin: -20px 0;
+  padding: 0;
+  list-style-type: none; }
+  .icon-links-list li {
+    margin: 20px 0; }
+    .icon-links-list li a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      text-decoration: none;
+      color: #333333;
+      -webkit-transition: color 0.16s ease-out;
+      transition: color 0.16s ease-out; }
+      .icon-links-list li a .icon-container {
+        border-color: #333333;
+        -webkit-transition: border-color 0.16s ease-out;
+        transition: border-color 0.16s ease-out; }
+      .icon-links-list li a:hover {
+        color: #989898; }
+        .icon-links-list li a:hover .icon-container {
+          border-color: #989898; }
+  .icon-links-list .icon-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-right: 12px;
+    border-radius: 50%;
+    border: 1px solid; }
+    .icon-links-list .icon-container i {
+      font-size: 16px; }

@@ -5,23 +5,29 @@ Title: Контакти
 Links: 
 
 - 
-  type: email
-  name: Test
-  link: http://example.com
+  type: facebook
+  name: MebeliRoko
+  link: '(link: https://www.facebook.com/MebeliRoko/ text: MebeliRoko)'
   telephone: ""
   email: fasf@asd.com
   mail: test@foo.com
 - 
   type: email
-  name: Abv
-  link: ""
+  name: Имейл
+  link: '(email: info@mebeliroko.com)'
   telephone: ""
-  email: h.dodov@abv.bg
+  email: info@mebeliroko.com
+- 
+  type: telephone
+  name: Телефон
+  link: '(tel: +359 89 383 4341)'
+  telephone: 089 383 4341
+  email: ""
 
 ----
 
 Location: 
 
-lat: "42.73041462888349"
-lng: "23.28836471154159"
-zoom: "7"
+lat: "42.852003"
+lng: "23.146072"
+zoom: "10"
