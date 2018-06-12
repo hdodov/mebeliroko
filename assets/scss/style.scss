@@ -13,6 +13,7 @@
 @import 'partials/_general';
 @import 'partials/_header';
 @import 'partials/_languages';
+@import 'partials/_spinner';
 
 @include media-smaller("sm") {
     .page-about {
@@ -187,26 +188,47 @@ form {
             background: lighten($color-background-1, 15);
         }
 
-        i {
+        i, .spinner {
             position: absolute;
                 top: 50%;
                 left: 50%;
             transform: translate(-50%, -50%);
         }
 
+        .button-text,
+        .when-success,
+        .when-error,
+        .when-waiting {
+            transition: all $transition-form-button;
+        }
+
         &:not(.is-success) .when-success,
-        &:not(.is-error) .when-error {
+        &:not(.is-error) .when-error,
+        &:not(.is-waiting) .when-waiting {
             pointer-events: none;
             visibility: hidden;
             opacity: 0;
         }
 
         &.is-success,
-        &.is-error {
+        &.is-error,
+        &.is-waiting {
             .button-text {
                 visibility: hidden;
                 opacity: 0;
             }
+        }
+
+        &.is-success {
+            background: $color-background-positive;
+        }
+
+        &.is-error {
+            background: $color-background-negative;
+        }
+
+        &.is-waiting {
+            background: $color-background-waiting;
         }
     }
 }

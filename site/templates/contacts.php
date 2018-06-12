@@ -11,7 +11,7 @@
             <h1 class="title"><?= $page->title(); ?></h1>
 
             <div class="row align-items-center page-content">
-                <div class="col-sm-6">
+                <div class="col-sm-4 offset-1">
                     <ul class="icon-links-list">
                         <?php foreach ($links as $link): ?>
                             <?php
@@ -55,13 +55,21 @@
                         
                         <textarea class="form-control" name="message" placeholder="<?= l::get('form.message'); ?>" required></textarea>
 
-                        <button class="is-success">
+                        <button>
                             <div class="button-text">
                                 <?= l::get('form.submit'); ?>
                             </div>
 
                             <div class="when-success">
                                 <i class="fa fa-check"></i>
+                            </div>
+
+                            <div class="when-waiting">
+                                <i class="spinner">
+                                    <svg class="circular" viewBox="25 25 50 50">
+                                        <circle class="path" cx="50" cy="50" r="20" fill="none"/>
+                                    </svg>
+                                </i>
                             </div>
                             
                             <div class="when-error">

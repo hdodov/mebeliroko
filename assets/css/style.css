@@ -659,6 +659,63 @@ header {
       padding: 5px;
       text-decoration: none; }
 
+.spinner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 24px;
+  position: relative; }
+
+.circular {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite; }
+
+.path {
+  -webkit-animation: dash 1.5s ease-in-out infinite;
+          animation: dash 1.5s ease-in-out infinite;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  stroke-width: 4px;
+  stroke: #fff; }
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px; }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px; } }
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0; }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px; }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px; } }
+
 @media (max-width: 767px) {
   .page-about .masonry-grid-wrapper {
     margin: 100px auto; } }
@@ -791,8 +848,8 @@ form {
     border-radius: 2px;
     -webkit-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.3);
             box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.3);
-    -webkit-transition: all 0.16s ease-out;
-    transition: all 0.16s ease-out; }
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
     form button:hover {
       cursor: pointer;
       background: #3e3e3e;
@@ -801,17 +858,30 @@ form {
     form button:focus {
       outline: none;
       background: #4a4a4a; }
-    form button i {
+    form button i, form button .spinner {
       position: absolute;
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%); }
+    form button .button-text,
+    form button .when-success,
+    form button .when-error,
+    form button .when-waiting {
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
     form button:not(.is-success) .when-success,
-    form button:not(.is-error) .when-error {
+    form button:not(.is-error) .when-error,
+    form button:not(.is-waiting) .when-waiting {
       pointer-events: none;
       visibility: hidden;
       opacity: 0; }
-    form button.is-success .button-text, form button.is-error .button-text {
+    form button.is-success .button-text, form button.is-error .button-text, form button.is-waiting .button-text {
       visibility: hidden;
       opacity: 0; }
+    form button.is-success {
+      background: #198e2e; }
+    form button.is-error {
+      background: #bd1414; }
+    form button.is-waiting {
+      background: #1379c3; }
