@@ -3,15 +3,15 @@
 <head>
     <?= snippet('_head'); ?>
 </head>
-<body vocab="http://schema.org/">
+<body class="contacts" vocab="http://schema.org/">
     <?= snippet('header'); ?>
 
-    <main class="container page-about">
+    <main class="container">
         <div class="page-head">
             <h1 class="title"><?= $page->title(); ?></h1>
 
             <div class="row align-items-center page-content">
-                <div class="col-sm-4 offset-1">
+                <div class="col-lg-4 offset-lg-1">
                     <ul class="icon-links-list">
                         <?php foreach ($links as $link): ?>
                             <?php
@@ -41,21 +41,16 @@
                     </ul>
                 </div>
 
-                <div class="col-sm-6">
-                    <form action="message" method="post">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <input class="form-control" type="text" name="name" placeholder="<?= l::get('form.name'); ?>" required>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <input class="form-control" type="email" name="email" placeholder="<?= l::get('form.email'); ?>" required>
-                            </div>
+                <div class="col-lg-6">
+                    <form class="ajax-form" action="message" method="post">
+                        <div class="input-row">
+                            <input class="form-control" type="text" name="name" placeholder="<?= l::get('form.name'); ?>">
+                            <input class="form-control" type="email" name="email" placeholder="<?= l::get('form.email'); ?>">
                         </div>
                         
-                        <textarea class="form-control" name="message" placeholder="<?= l::get('form.message'); ?>" required></textarea>
+                        <textarea class="form-control" name="message" placeholder="<?= l::get('form.message'); ?>"></textarea>
 
-                        <button>
+                        <button type="submit">
                             <div class="button-text">
                                 <?= l::get('form.submit'); ?>
                             </div>

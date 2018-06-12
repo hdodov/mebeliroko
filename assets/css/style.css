@@ -791,6 +791,9 @@ header {
         .icon-links-list li a:hover .icon-container {
           border-color: #989898; }
   .icon-links-list .icon-container {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -811,77 +814,92 @@ header {
 textarea.form-control {
   height: 110px; }
 
-form {
-  margin: -30px 0; }
-  form .row {
-    margin-top: 30px;
-    margin-bottom: 30px; }
-  form .form-control {
-    display: block;
-    width: 100%;
-    padding: 8px 12px;
-    font-size: 16px;
-    line-height: 1.5;
-    border: 1px solid #dcdcdc;
-    border-radius: 2px;
-    -webkit-transition: border-color 0.16s ease-out;
-    transition: border-color 0.16s ease-out; }
-    form .form-control::-webkit-input-placeholder {
-      color: #b5b5b5; }
-    form .form-control:-ms-input-placeholder {
-      color: #b5b5b5; }
-    form .form-control::-ms-input-placeholder {
-      color: #b5b5b5; }
-    form .form-control::placeholder {
-      color: #b5b5b5; }
-    form .form-control:focus {
-      outline: none;
-      border-color: #242424; }
-  form button {
-    width: 100%;
-    margin: 30px 0;
-    padding: 12px 20px;
-    position: relative;
-    border: none;
-    background: #242424;
-    color: #fff;
-    border-radius: 2px;
-    -webkit-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.3);
-            box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.3);
+form .input-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: -20px 0; }
+  form .input-row .form-control + .form-control {
+    margin-left: 20px; }
+
+form .form-control {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  padding: 8px 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+  -webkit-transition: border-color 0.16s ease-out;
+  transition: border-color 0.16s ease-out; }
+  form .form-control::-webkit-input-placeholder {
+    color: #b5b5b5; }
+  form .form-control:-ms-input-placeholder {
+    color: #b5b5b5; }
+  form .form-control::-ms-input-placeholder {
+    color: #b5b5b5; }
+  form .form-control::placeholder {
+    color: #b5b5b5; }
+  form .form-control:focus {
+    outline: none;
+    border-color: #242424; }
+
+form button {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  padding: 12px 20px;
+  position: relative;
+  border: none;
+  background: #242424;
+  color: #fff;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+  form button:hover {
+    cursor: pointer;
+    background: #3e3e3e;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  form button:focus {
+    outline: none;
+    background: #4a4a4a; }
+  form button i, form button .spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  form button .button-text,
+  form button .when-success,
+  form button .when-error,
+  form button .when-waiting {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease; }
-    form button:hover {
-      cursor: pointer;
-      background: #3e3e3e;
-      -webkit-box-shadow: none;
-              box-shadow: none; }
-    form button:focus {
-      outline: none;
-      background: #4a4a4a; }
-    form button i, form button .spinner {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%); }
-    form button .button-text,
-    form button .when-success,
-    form button .when-error,
-    form button .when-waiting {
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
-    form button:not(.is-success) .when-success,
-    form button:not(.is-error) .when-error,
-    form button:not(.is-waiting) .when-waiting {
-      pointer-events: none;
-      visibility: hidden;
-      opacity: 0; }
-    form button.is-success .button-text, form button.is-error .button-text, form button.is-waiting .button-text {
-      visibility: hidden;
-      opacity: 0; }
-    form button.is-success {
-      background: #198e2e; }
-    form button.is-error {
-      background: #bd1414; }
-    form button.is-waiting {
-      background: #1379c3; }
+  form button:not(.is-success) .when-success,
+  form button:not(.is-error) .when-error,
+  form button:not(.is-waiting) .when-waiting {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0; }
+  form button.is-success .button-text, form button.is-error .button-text, form button.is-waiting .button-text {
+    visibility: hidden;
+    opacity: 0; }
+  form button.is-success {
+    background: #198e2e; }
+  form button.is-error {
+    background: #bd1414; }
+  form button.is-waiting {
+    background: #1379c3; }

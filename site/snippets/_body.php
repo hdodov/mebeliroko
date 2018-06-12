@@ -1,6 +1,6 @@
 <?php
 
-echo js('assets/node_modules/jquery/dist/jquery.slim.min.js');
+echo js('assets/node_modules/jquery/dist/jquery.min.js');
 
 if (!empty($loadMasonry)) {
     echo js('assets/node_modules/masonry-layout/dist/masonry.pkgd.min.js');
