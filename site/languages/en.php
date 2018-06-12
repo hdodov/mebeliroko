@@ -16,3 +16,7 @@ l::set(array(
     'form.message' => 'Write your message here...',
     'form.submit' => 'Submit'
 ));
+
+l::set(array(
+    'mail.subject' => 'User message from %s' // %s is site name
+));

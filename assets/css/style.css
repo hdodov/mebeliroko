@@ -449,6 +449,10 @@ main.container {
     max-width: 40em;
     margin: 50px auto; }
 
+.page-content {
+  margin-top: 60px;
+  margin-bottom: 60px; }
+
 .site-title {
   margin: 120px 0;
   font-size: 48px;
@@ -746,3 +750,68 @@ header {
     border: 1px solid; }
     .icon-links-list .icon-container i {
       font-size: 16px; }
+
+textarea.form-control {
+  height: 110px; }
+
+form {
+  margin: -30px 0; }
+  form .row {
+    margin-top: 30px;
+    margin-bottom: 30px; }
+  form .form-control {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+    -webkit-transition: border-color 0.16s ease-out;
+    transition: border-color 0.16s ease-out; }
+    form .form-control::-webkit-input-placeholder {
+      color: #b5b5b5; }
+    form .form-control:-ms-input-placeholder {
+      color: #b5b5b5; }
+    form .form-control::-ms-input-placeholder {
+      color: #b5b5b5; }
+    form .form-control::placeholder {
+      color: #b5b5b5; }
+    form .form-control:focus {
+      outline: none;
+      border-color: #242424; }
+  form button {
+    width: 100%;
+    margin: 30px 0;
+    padding: 12px 20px;
+    position: relative;
+    border: none;
+    background: #242424;
+    color: #fff;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.16s ease-out;
+    transition: all 0.16s ease-out; }
+    form button:hover {
+      cursor: pointer;
+      background: #3e3e3e;
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+    form button:focus {
+      outline: none;
+      background: #4a4a4a; }
+    form button i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+    form button:not(.is-success) .when-success,
+    form button:not(.is-error) .when-error {
+      pointer-events: none;
+      visibility: hidden;
+      opacity: 0; }
+    form button.is-success .button-text, form button.is-error .button-text {
+      visibility: hidden;
+      opacity: 0; }

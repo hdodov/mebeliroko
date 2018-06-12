@@ -13,6 +13,8 @@ $color-menu-text: #888888;
 $color-text-1: #333333;
 $color-text-2: #989898;
 $color-text-active-1: #ffffff;
+$color-success: #1cc71c;
+$color-error: #cc1414;
 
 $font-family-1: Montserrat, 'Helvetica Neue', Arial, sans-serif;
 
@@ -24,6 +26,8 @@ $transition-menu-hover: $transition-1;
 $transition-tag-box: 0.4s cubic-bezier(0.27, 0.73, 0.25, 1);
 $transition-tag-hover: 0.1s ease;
 $transition-icon-link-list-hover: $transition-1;
+$transition-form-border: $transition-1;
+$transition-form-button: $transition-1;
 
 $transition-mobile-nav-shadow: 0.4s ease;
 $transition-mobile-menu-slide: 0.4s cubic-bezier(0.07, 0.97, 0.3, 1);

@@ -16,3 +16,7 @@ l::set(array(
     'form.message' => 'Напишете съобщението си тук...',
     'form.submit' => 'Изпрати'
 ));
+
+l::set(array(
+    'mail.subject' => 'Съобщение от %s'
+));
