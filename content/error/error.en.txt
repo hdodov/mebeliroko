@@ -1,0 +1,8 @@
+Title: Oops...
+
+----
+
+Text: 
+
+An error occurred. This page doesn’t exist.
+Try to go (link: /en text: home) and view something different.

@@ -1,0 +1,19 @@
+.google-map {
+    width: 100%;
+    padding-top: 56.25%;
+    border: 1px solid $color-border-map;
+
+    @include media-smaller('sm') {
+        width: auto;
+        height: 100vh;
+        height: calc(100vh - #{$header-height-mobile});
+        margin: 0 -15px;
+        border-left: none;
+        border-right: none;
+    }
+
+    @include media-larger('xs') {
+        border-radius: $border-radius-1;
+        box-shadow: $box-shadow-map;
+    }
+}

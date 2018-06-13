@@ -1,6 +1,4 @@
-Title: 
-
-Кухни 2
+Title: Type 2
 
 ----
 
@@ -8,4 +6,8 @@ Text:
 
 ----
 
-Tags: 
+Tags: Kitchens
+
+----
+
+Url-key: type-2

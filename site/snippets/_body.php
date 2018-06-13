@@ -17,14 +17,7 @@ if (!empty($loadLightbox)) {
 }
 
 if (!empty($loadMap)) {
-    $mapKey = c::get('google.maps.key');
-    $mapLocale = $site->language->code();
-
-    echo js("https://maps.googleapis.com/maps/api/js?key=$mapKey&language=$mapLocale&callback=GoogleMapsLoaded", array(
-        'async' => true,
-        'defer' => true
-    ));
-
+    echo snippet('map');
     echo js('assets/js/map.js');
 }
 

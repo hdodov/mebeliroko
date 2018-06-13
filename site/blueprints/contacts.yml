@@ -38,6 +38,7 @@ fields:
       bg: Влачете маркера или цъкнете на картата, за да изберете място.
     translate: false
     ratio: 16:9
+    style: gray
     map:
       zoom: 2
       center:

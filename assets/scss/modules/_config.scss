@@ -13,11 +13,16 @@ $color-menu-text: #888888;
 $color-text-1: #333333;
 $color-text-2: #989898;
 $color-text-active-1: #ffffff;
+$color-text-placeholder: #b5b5b5;
 $color-success: #1cc71c;
 $color-error: #cc1414;
 $color-background-positive: #198e2e;
 $color-background-negative: #bd1414;
 $color-background-waiting: #1379c3;
+$color-border-1: #dcdcdc;
+$color-border-map: #eaeaea;
+
+$border-radius-1: 2px;
 
 $font-family-1: Montserrat, 'Helvetica Neue', Arial, sans-serif;
 
@@ -26,8 +31,6 @@ $transition-grid-fade: $transition-1;
 $transition-grid-items-fade: 0.3s ease;
 $transition-grid-items-scale: 0.4s cubic-bezier(0.27, 0.73, 0.25, 1);
 $transition-menu-hover: $transition-1;
-$transition-tag-box: 0.4s cubic-bezier(0.27, 0.73, 0.25, 1);
-$transition-tag-hover: 0.1s ease;
 $transition-icon-link-list-hover: $transition-1;
 $transition-form-border: $transition-1;
 $transition-form-button: 0.3s ease;
@@ -41,8 +44,11 @@ $transition-mobile-menu:
     transform $transition-mobile-menu-slide,
     opacity $transition-mobile-menu-fade;
 
-$box-shadow-mobile-nav-top: 0 0px 8px 0 rgba(0, 0, 0, 0.6);
-$box-shadow-mobile-nav-top-active: 0 2px 8px 0 rgba(0, 0, 0, 0.6);
-$box-shadow-mobile-nav-content-active: 0px 0px 6px 0 #000;
+$box-shadow-mobile-nav-top: 0 0px 8px 0 rgba($color-black, 0.6);
+$box-shadow-mobile-nav-top-active: 0 2px 8px 0 rgba($color-black, 0.6);
+$box-shadow-mobile-nav-content-active: 0px 0px 6px 0 $color-black;
+$box-shadow-grid-item: 0 2px 3px -1px rgba($color-black, 0.5);
+$box-shadow-button: 0 2px 1px -1px rgba($color-black, 0.3);
+$box-shadow-map: 0 3px 4px -2px rgba($color-black, 0.4);
 
-$border-mobile-nav: 1px solid rgba(#fff, 0.1);
+$border-mobile-nav: 1px solid rgba($color-white, 0.1);

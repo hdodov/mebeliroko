@@ -30,5 +30,7 @@ return function ($site, $pages, $page) {
         }
     }
 
-    return compact('links');
+    $hasLinks = count($links) > 0;
+
+    return compact('links', 'hasLinks');
 };

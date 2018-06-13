@@ -1,4 +1,4 @@
-Title: Спални
+Title: Bedrooms
 
 ----
 
@@ -6,4 +6,8 @@ Text:
 
 ----
 
-Tags: 
+Tags: Bedrooms
+
+----
+
+Url-key: bedrooms

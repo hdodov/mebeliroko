@@ -3,16 +3,16 @@
 <head>
     <?= snippet('_head'); ?>
 </head>
-<body vocab="http://schema.org/">
+<body class="about" vocab="http://schema.org/">
     <?= snippet('header'); ?>
 
-    <main class="container page-about">
+    <main class="container">
         <div class="page-head">
             <h1 class="title"><?= $page->title(); ?></h1>
         </div>
 
         <?php if (count($teamMembers) > 0): ?>
-            <div class="row team-container">
+            <div class="row row-team">
                 <?php foreach ($page->members()->toStructure() as $member): ?>
                     <?php
                         $memberImage = image($member->image());

@@ -1,4 +1,4 @@
-Title: Дневни
+Title: Living rooms
 
 ----
 
@@ -6,4 +6,8 @@ Text:
 
 ----
 
-Tags: 
+Tags: Living rooms
+
+----
+
+Url-key: living-rooms

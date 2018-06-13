@@ -5,6 +5,7 @@ c::set('license', 'put your license key here');
 
 c::set('mail.receiver', 'h.dodov@gmail.com');
 c::set('google.maps.key', 'AIzaSyAfmWnMXJVPTlpT8dS6TIrQzuq0IBJdEf0');
+c::set('google.maps.styles.gray', kirby()->urls()->assets() . DS . 'maps' . DS . 'gray.json');
 
 c::set('languages', array(
     array(

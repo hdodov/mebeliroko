@@ -1,4 +1,4 @@
-Title: Проект 1
+Title: Project 1
 
 ----
 
@@ -6,4 +6,8 @@ Text:
 
 ----
 
-Tags: 
+Tags: Whole projects
+
+----
+
+Url-key: project-1

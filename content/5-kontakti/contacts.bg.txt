@@ -7,7 +7,7 @@ Links:
 - 
   type: facebook
   name: MebeliRoko
-  link: '(link: https://www.facebook.com/MebeliRoko/ text: MebeliRoko)'
+  link: '(link: https://www.facebook.com/MebeliRoko/ text: MebeliRoko target: _blank)'
   telephone: ""
   email: fasf@asd.com
   mail: test@foo.com

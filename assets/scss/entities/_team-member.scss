@@ -1,0 +1,53 @@
+.team-member {
+    .image-wrapper {
+        margin-bottom: 15px;
+        padding-bottom: 56.25%;
+        position: relative;
+
+        .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+
+            width: 100%;
+            height: 100%;
+            position: absolute;
+                top: 0;
+                left: 0;
+
+            border-radius: $border-radius-1;
+            background: $color-placeholder;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .head {
+        margin-bottom: 15px;
+
+        .name {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .title {
+            margin: 0;
+            color: $color-text-2;
+        }
+    }
+
+    .text {
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @include media-smaller('sm') {
+        & + .team-member {
+            margin-top: 60px;
+        }
+    }
+}

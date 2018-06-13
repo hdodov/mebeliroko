@@ -1,4 +1,4 @@
-Title: Екстериор
+Title: Exterior
 
 ----
 
@@ -6,4 +6,8 @@ Text:
 
 ----
 
-Tags: 
+Tags: Exterior
+
+----
+
+Url-key: exterior

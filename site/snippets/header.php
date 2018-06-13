@@ -1,6 +1,5 @@
 <?php
     $logo = $site->image($site->logo());
-    $copyright = $site->copyright();
 
     if (!empty($logo)) {
         $logoThumb = thumb($logo, array('width' => 600));

@@ -1,0 +1,20 @@
+title:
+  en: Error
+  bg: Грешка
+icon: times
+
+pages: false
+
+files: false
+
+fields:
+  title:
+    label:
+      en: Title
+      bg: Заглавие
+    type: text
+  text:
+    label:
+      en: Content
+      bg: Съдържание
+    type: textarea
