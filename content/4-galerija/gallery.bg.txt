@@ -1,1 +1,5 @@
 Title: Галерия
+
+----
+
+Hide-duplicates: true

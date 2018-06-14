@@ -13,3 +13,13 @@ fields:
       en: Title
       bg: Заглавие
     type: text
+  hide_duplicates:
+    label:
+      en: Hide duplicates
+      bg: Скривай дубликати
+    type: toggle
+    text: yes/no
+    translate: false
+    help:
+      en: When enabled, images with the same file name will be added only once, allowing you to add an image multiple times across several projects.
+      bg: Когато е включено, снимки със същото име на файла ще бъдат добавени само веднъж, позволявайки една снимка да бъде добавеня в няколко проекта.
