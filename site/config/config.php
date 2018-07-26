@@ -2,6 +2,7 @@
 
 c::set('debug', true);
 c::set('license', 'put your license key here');
+c::set('panel.install', true);
 
 c::set('mail.receiver', 'h.dodov@gmail.com');
 c::set('google.maps.key', 'AIzaSyAfmWnMXJVPTlpT8dS6TIrQzuq0IBJdEf0');
