@@ -1,53 +1,53 @@
-Title: За нас
-
-----
-
-Text: 
-
-----
-
-Tags: 
-
-----
-
-Members: 
-
-- 
-  picture: bbhdqri4l08.jpg
-  text: |
-    Lorem ipsum dolor **sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    
-    Телефон: (tel: 089 383 4341)
-  image: bbhdqri4l08.jpg
-  name: Явор Иванов
-  title: Главен Шеф
-- 
-  image: zjelwkkdlju.jpg
-  name: Гергана Христоваaaa
-  title: Счетоводител
-  text: |
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    
-    Имейл: (email: example@gmail.com)
-- 
-  image: igor.jpg
-  name: ""
-  title: ""
-  text: >
-    Игор радостно реже
-    дървя рано в
-    понеделнишката утрин.
-
-----
-
-Gallery: 
-
-- 5digpgsh27u.jpg
-- 6_ee0s7d0ck.jpg
-- ds6ml8ft3xa.jpg
-- f6gk6nhwlmy.jpg
-- igor.jpg
-- l7kxhc1mpfo.jpg
-- tznbaktucti.jpg
-- ubgqwmzqqzm.jpg
+Title: За нас
+
+----
+
+Text: 
+
+----
+
+Tags: 
+
+----
+
+Members: 
+
+- 
+  picture: bbhdqri4l08.jpg
+  text: |
+    Lorem ipsum dolor **sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    
+    Телефон: (tel: 089 383 4341)
+  image: bbhdqri4l08.jpg
+  name: Явор Иванов
+  title: Главен Шеф
+- 
+  image: zjelwkkdlju.jpg
+  name: Гергана Христоваaaa
+  title: Счетоводител
+  text: |
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    
+    Имейл: (email: example@gmail.com)
+- 
+  image: igor.jpg
+  name: ""
+  title: ""
+  text: >
+    Игор радостно реже
+    дървя рано в
+    понеделнишката утрин.
+
+----
+
+Gallery: 
+
+- 5digpgsh27u.jpg
+- 6_ee0s7d0ck.jpg
+- ds6ml8ft3xa.jpg
+- f6gk6nhwlmy.jpg
+- igor.jpg
+- l7kxhc1mpfo.jpg
+- tznbaktucti.jpg
+- ubgqwmzqqzm.jpg
 - xyc3bx8fxni.jpg

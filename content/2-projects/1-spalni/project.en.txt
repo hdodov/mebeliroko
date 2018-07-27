@@ -1,13 +1,13 @@
-Title: Bedrooms
-
-----
-
-Text: 
-
-----
-
-Tags: Bedrooms
-
-----
-
+Title: Bedrooms
+
+----
+
+Text: 
+
+----
+
+Tags: Bedrooms
+
+----
+
 Url-key: bedrooms

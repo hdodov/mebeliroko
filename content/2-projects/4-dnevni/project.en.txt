@@ -1,13 +1,13 @@
-Title: Living rooms
-
-----
-
-Text: 
-
-----
-
-Tags: Living rooms
-
-----
-
+Title: Living rooms
+
+----
+
+Text: 
+
+----
+
+Tags: Living rooms
+
+----
+
 Url-key: living-rooms

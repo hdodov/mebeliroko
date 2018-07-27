@@ -1,13 +1,13 @@
-Title: Exterior
-
-----
-
-Text: 
-
-----
-
-Tags: Exterior
-
-----
-
+Title: Exterior
+
+----
+
+Text: 
+
+----
+
+Tags: Exterior
+
+----
+
 Url-key: exterior

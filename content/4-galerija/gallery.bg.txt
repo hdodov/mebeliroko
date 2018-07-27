@@ -1,5 +1,5 @@
-Title: Галерия
-
-----
-
+Title: Галерия
+
+----
+
 Hide-duplicates: true

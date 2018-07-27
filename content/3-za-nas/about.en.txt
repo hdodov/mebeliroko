@@ -1,56 +1,56 @@
-Title: About Us
-
-----
-
-Text: 
-
-----
-
-Tags: 
-
-----
-
-Members: 
-
-- 
-  picture: bbhdqri4l08.jpg
-  text: |
-    Lorem ipsum dolor **sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    
-    Telephone: (tel: 089 383 4341)
-  image: bbhdqri4l08.jpg
-  name: Yavor Ivanov
-  title: CEO
-- 
-  image: zjelwkkdlju.jpg
-  name: Gergana Hristova
-  title: Accountant
-  text: |
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    
-    Email: (email: example@gmail.com)
-- 
-  image: igor.jpg
-  name: ""
-  title: ""
-  text: >
-    Igor happily shreds wood early in the
-    Monday morning.
-
-----
-
-Gallery: 
-
-- 5digpgsh27u.jpg
-- 6_ee0s7d0ck.jpg
-- ds6ml8ft3xa.jpg
-- f6gk6nhwlmy.jpg
-- igor.jpg
-- l7kxhc1mpfo.jpg
-- tznbaktucti.jpg
-- ubgqwmzqqzm.jpg
-- xyc3bx8fxni.jpg
-
-----
-
+Title: About Us
+
+----
+
+Text: 
+
+----
+
+Tags: 
+
+----
+
+Members: 
+
+- 
+  picture: bbhdqri4l08.jpg
+  text: |
+    Lorem ipsum dolor **sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    
+    Telephone: (tel: 089 383 4341)
+  image: bbhdqri4l08.jpg
+  name: Yavor Ivanov
+  title: CEO
+- 
+  image: zjelwkkdlju.jpg
+  name: Gergana Hristova
+  title: Accountant
+  text: |
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    
+    Email: (email: example@gmail.com)
+- 
+  image: igor.jpg
+  name: ""
+  title: ""
+  text: >
+    Igor happily shreds wood early in the
+    Monday morning.
+
+----
+
+Gallery: 
+
+- 5digpgsh27u.jpg
+- 6_ee0s7d0ck.jpg
+- ds6ml8ft3xa.jpg
+- f6gk6nhwlmy.jpg
+- igor.jpg
+- l7kxhc1mpfo.jpg
+- tznbaktucti.jpg
+- ubgqwmzqqzm.jpg
+- xyc3bx8fxni.jpg
+
+----
+
 Url-key: about-us

@@ -1,13 +1,13 @@
-Title: Type 2
-
-----
-
-Text: 
-
-----
-
-Tags: Kitchens
-
-----
-
+Title: Type 2
+
+----
+
+Text: 
+
+----
+
+Tags: Kitchens
+
+----
+
 Url-key: type-2

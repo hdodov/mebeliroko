@@ -1,13 +1,13 @@
-Title: Rocco Furniture
-
-----
-
-Copyright: Rocco Furniture © www.mebeliroko.com
-
-----
-
-Logo: logo.png
-
-----
-
+Title: Rocco Furniture
+
+----
+
+Copyright: Rocco Furniture © www.mebeliroko.com
+
+----
+
+Logo: logo.png
+
+----
+
 Slogan: Ideas for Home
