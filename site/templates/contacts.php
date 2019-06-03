@@ -2,7 +2,7 @@
 <html>
 <head>
     <?= snippet('_head'); ?>
-    <?php $lang = $site->language()->code() ?? 'en' ?>
+    <?php $lang = $site->language()->code() ?>
     <script src="https://www.google.com/recaptcha/api.js?hl=<?= $lang ?>" async defer></script>
 </head>
 <body class="contacts" vocab="http://schema.org/">
