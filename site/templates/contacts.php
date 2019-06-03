@@ -2,6 +2,8 @@
 <html>
 <head>
     <?= snippet('_head'); ?>
+    <?php $lang = $site->language()->code() ?? 'en' ?>
+    <script src="https://www.google.com/recaptcha/api.js?hl=<?= $lang ?>" async defer></script>
 </head>
 <body class="contacts" vocab="http://schema.org/">
     <?= snippet('header'); ?>
@@ -52,6 +54,8 @@
                     </div>
                     
                     <textarea class="form-control" name="message" placeholder="<?= l::get('form.message'); ?>"></textarea>
+                    
+                    <div class="g-recaptcha" data-sitekey="6Lf-0aYUAAAAAA5NDkYbYPY7uArDUN56gSG5zh5G"></div>
 
                     <button type="submit">
                         <div class="button-text">
